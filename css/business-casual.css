@@ -80,7 +80,7 @@ p {
 }
 
 #mainNav .navbar-brand {
-  color: #b3e5fc;
+  color: #a5a4aa;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
@@ -89,7 +89,7 @@ p {
 }
 
 #mainNav .navbar-nav .nav-item.active .nav-link {
-  color: #b3e5fc;
+  color: #a5a4aa;
 }
 
 @media (min-width: 992px) {
@@ -100,7 +100,7 @@ p {
     color: rgba(255, 255, 255, 0.4);
   }
   #mainNav .navbar-nav .nav-item.active .nav-link:hover {
-    color: #b3e5fc;
+    color: #a5a4aa;
   }
 }
 
@@ -145,7 +145,7 @@ p {
 .cta {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  background-color: rgba(179, 229, 252, 0.9);
+  background-color: rgba(165, 164, 170, 0.9);
 }
 
 .cta .cta-inner {
@@ -202,7 +202,7 @@ p {
 }
 
 .list-hours .list-hours-item {
-  border-bottom: 1px solid rgba(179, 229, 252, 0.5);
+  border-bottom: 1px solid rgba(165, 164, 170, 0.5);
   padding-bottom: .25rem;
   margin-bottom: 1rem;
   font-style: italic;
@@ -210,7 +210,7 @@ p {
 
 .list-hours .list-hours-item.today {
   font-weight: bold;
-  color: #b3e5fc;
+  color: #a5a4aa;
 }
 
 @media (min-width: 992px) {
@@ -229,11 +229,11 @@ p {
 }
 
 .text-primary {
-  color: #b3e5fc !important;
+  color: #a5a4aa !important;
 }
 
 .bg-primary {
-  background-color: #b3e5fc !important;
+  background-color: #a5a4aa !important;
 }
 
 .btn {
@@ -241,13 +241,13 @@ p {
 }
 
 .btn-primary {
-  background-color: #b3e5fc;
-  border-color: #b3e5fc;
+  background-color: #a5a4aa;
+  border-color: #a5a4aa;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  background-color: #82d4fa;
-  border-color: #82d4fa;
+  background-color: #8b8a91;
+  border-color: #8b8a91;
 }
 
 .font-weight-light {
