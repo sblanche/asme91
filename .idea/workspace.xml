@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="138e9758-5d78-4e9b-8e50-eeb284cdfeb3" name="Default Changelist" comment="fix: update evenement octobre 2025">
+      <change afterPath="$PROJECT_DIR$/document/Proposition-Galette-2026.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/evenements.html" beforeDir="false" afterPath="$PROJECT_DIR$/evenements.html" afterDir="false" />
     </list>
@@ -205,7 +206,7 @@
     "git-widget-placeholder": "master",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/sylvinho/Projets/asme91/img/evenement",
+    "last_opened_file_path": "/home/sylvinho/Projets/asme91/document",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -216,11 +217,14 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecapUselessUpdatesCounter">
+    <option name="suspendCountdown" value="9" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/document" />
       <recent name="$PROJECT_DIR$/img/evenement" />
       <recent name="$PROJECT_DIR$/img" />
-      <recent name="$PROJECT_DIR$/document" />
       <recent name="$PROJECT_DIR$" />
       <recent name="C:\dev\asme91.fr\startbootstrap-business-casual\img" />
     </key>
@@ -305,7 +309,7 @@
       <workItem from="1738884716195" duration="4278000" />
       <workItem from="1739312326749" duration="1925000" />
       <workItem from="1739400496134" duration="1643000" />
-      <workItem from="1766918408776" duration="2406000" />
+      <workItem from="1766918408776" duration="3088000" />
     </task>
     <task id="LOCAL-00002" summary="Default Changelist">
       <created>1573232292147</created>
@@ -399,7 +403,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766920689785</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="fix: update evenement octobre 2025">
+      <option name="closed" value="true" />
+      <created>1766920831220</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1766920831220</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
