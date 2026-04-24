@@ -22,6 +22,89 @@
     <!-- Custom styles for this template -->
     <link href="css/business-casual.min.css" rel="stylesheet">
 
+    <style>
+        .partners-group-title {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #8b5e00;
+            border-bottom: 2px solid rgba(165, 164, 170, 0.5);
+            padding-bottom: 0.5rem;
+            margin: 2.5rem 0 1.5rem;
+            text-align: left;
+        }
+        .partner-card {
+            background-color: rgba(255, 255, 255, 0.75);
+            border-radius: 0.5rem;
+            padding: 1.5rem 1.25rem;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border: 1px solid rgba(165, 164, 170, 0.25);
+        }
+        .partner-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(46, 23, 2, 0.12);
+            border-color: rgba(139, 94, 0, 0.35);
+        }
+        .partner-card .partner-logo {
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        .partner-card .partner-logo img {
+            max-height: 100px;
+            max-width: 100%;
+            object-fit: contain;
+        }
+        .partner-card .partner-name {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #2e1702;
+            margin-bottom: 0.5rem;
+        }
+        .partner-card .partner-desc {
+            font-size: 0.95rem;
+            color: #444;
+            margin-bottom: 0.75rem;
+            flex-grow: 1;
+        }
+        .partner-card .partner-link {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #8b5e00;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s ease;
+        }
+        .partner-card .partner-link:hover {
+            border-bottom-color: #8b5e00;
+            text-decoration: none;
+        }
+        .partner-card.featured {
+            background-color: rgba(255, 250, 240, 0.9);
+            border-color: rgba(139, 94, 0, 0.4);
+        }
+        .partner-card.featured .partner-logo {
+            height: 130px;
+        }
+        .partner-card.featured .partner-logo img {
+            max-height: 130px;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -57,9 +140,9 @@
                     <a class="nav-link text-uppercase text-expanded" href="le-mot-du-president.html">Le mot du pr&eacute;sident</a>
                 </li>
                 <li class="nav-item active px-lg-3">
-                    <a class="nav-link text-uppercase text-expanded" href="contactez-nous.html">Partenaires</a>
+                    <a class="nav-link text-uppercase text-expanded" href="partenaires.html">Partenaires</a>
                 </li>
-                <li class="nav-item active px-lg-3">
+                <li class="nav-item px-lg-3">
                     <a class="nav-link text-uppercase text-expanded" href="contactez-nous.html">Contactez-nous</a>
                 </li>
             </ul>
@@ -70,205 +153,184 @@
 <section class="page-section cta">
     <div class="container">
         <div class="row">
-            <div class="col-xl-9 mx-auto">
-                <div class="cta-inner text-center rounded">
-                    <h2 class="section-heading mb-5">
-                        <span class="section-heading-upper">Liste de nos partenaires</span>
+            <div class="col-xl-11 mx-auto">
+                <div class="cta-inner rounded">
+                    <h2 class="section-heading mb-4 text-center">
+                        <span class="section-heading-lower">Nos partenaires</span>
                     </h2>
-                    <div style="width: 100%;">
-                        <table class="position-relative">
-                            <tbody>
-                            <tr>
-                                <td width="5%"></td>
-                                <td width="35%" style="text-align: left;">
-                                    <p>
-                                        <a class="link" href="https://www.moulinsdefrance.org" target="_blank" rel="noopener noreferrer">
-                                            <img loading="lazy" src="./img/partenaire/ffam.png" alt="FFAM" width="160"/>
-                                        </a>
-                                    </p>
-                                </td>
-                                <td width="55%" style="text-align: left">
-                                    La <a href="https://www.moulinsdefrance.org/"
-                                             target="_blank" rel="noopener noreferrer">FFAM</a> : F&eacute;d&eacute;ration Fran&ccedil;aise des
-                                    Associations de sauvegarde des Moulins, Association de sauvegarde du patrimoine cr&eacute;&eacute;e
-                                    en 1977.
-                                </td>
-                                <td width="5%"></td>
-                            </tr>
-                            <tr>
-                                <td colspan="4" height="30"></td>
-                            </tr>
-                            </tbody>
-                        </table>
+                    <p class="text-center mb-4">
+                        Ces structures nous soutiennent dans la sauvegarde et la valorisation du patrimoine des moulins de l'Essonne.
+                    </p>
+
+                    <h3 class="partners-group-title">Notre fédération</h3>
+
+                    <div class="row">
+                        <div class="col-md-8 col-lg-6 mx-auto mb-4">
+                            <article class="partner-card featured">
+                                <div class="partner-logo">
+                                    <a href="https://www.moulinsdefrance.org" target="_blank" rel="noopener noreferrer">
+                                        <img loading="lazy" src="./img/partenaire/ffam.png" alt="FFAM"/>
+                                    </a>
+                                </div>
+                                <div class="partner-name">FFAM</div>
+                                <div class="partner-desc">
+                                    Fédération Française des Associations de sauvegarde des Moulins. Association de sauvegarde du patrimoine créée en 1977.
+                                </div>
+                                <a class="partner-link" href="https://www.moulinsdefrance.org" target="_blank" rel="noopener noreferrer">moulinsdefrance.org &rarr;</a>
+                            </article>
+                        </div>
                     </div>
-                    <br/>
-                    <div style="width: 100%;">
-                        <table class="position-relative">
-                            <tbody>
-                            <tr>
-                                <td width="5%"></td>
-                                <td width="35%" style="text-align: left;">
+
+                    <h3 class="partners-group-title">Syndicats &amp; collectivités</h3>
+
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-4 mb-4">
+                            <article class="partner-card">
+                                <div class="partner-logo">
                                     <a href="https://siarja.fr" target="_blank" rel="noopener noreferrer">
-                                        <img loading="lazy" src="./img/partenaire/siarja.png" alt="SIARJA" width="160"/>
+                                        <img loading="lazy" src="./img/partenaire/siarja.png" alt="SIARJA"/>
                                     </a>
-                                </td>
-                                <td width="55%" style="text-align: left;">Le <a class="boot" href="https://siarja.fr"
-                                          target="_blank" rel="noopener noreferrer">SIARJA</a> : Syndicat mixte pour l’aménagement et
-                                    l'entretien de la
-                                    rivière la Juine et de ses affluents.
-                                </td>
-                                <td width="5%"></td>
-                            </tr>
-                            <tr>
-                                <td colspan="4" height="45"></td>
-                            </tr>
-                            <!--
-                            </tbody>
-                        </table>
+                                </div>
+                                <div class="partner-name">SIARJA</div>
+                                <div class="partner-desc">
+                                    Syndicat mixte pour l'aménagement et l'entretien de la rivière la Juine et de ses affluents.
+                                </div>
+                                <a class="partner-link" href="https://siarja.fr" target="_blank" rel="noopener noreferrer">siarja.fr &rarr;</a>
+                            </article>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 mb-4">
+                            <article class="partner-card">
+                                <div class="partner-logo">
+                                    <a href="https://www.siarce.fr" target="_blank" rel="noopener noreferrer">
+                                        <img loading="lazy" src="./img/partenaire/logo-siarce.jpg" alt="SIARCE"/>
+                                    </a>
+                                </div>
+                                <div class="partner-name">SIARCE</div>
+                                <div class="partner-desc">
+                                    Syndicat Intercommunal d'Aménagement, de Rivières et du Cycle de l'Eau.
+                                </div>
+                                <a class="partner-link" href="https://www.siarce.fr" target="_blank" rel="noopener noreferrer">siarce.fr &rarr;</a>
+                            </article>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 mb-4">
+                            <article class="partner-card">
+                                <div class="partner-logo">
+                                    <a href="https://www.syage.org" target="_blank" rel="noopener noreferrer">
+                                        <img loading="lazy" src="./img/partenaire/syage.png" alt="SyAGE"/>
+                                    </a>
+                                </div>
+                                <div class="partner-name">SyAGE</div>
+                                <div class="partner-desc">
+                                    Ensemble protégeons la ressource en eau.
+                                </div>
+                                <a class="partner-link" href="https://www.syage.org" target="_blank" rel="noopener noreferrer">syage.org &rarr;</a>
+                            </article>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 mb-4">
+                            <article class="partner-card">
+                                <div class="partner-logo">
+                                    <a href="http://www.mairie-etampes.fr" target="_blank" rel="noopener noreferrer">
+                                        <img loading="lazy" src="./img/partenaire/etampes.png" alt="Ville d'Étampes"/>
+                                    </a>
+                                </div>
+                                <div class="partner-name">Ville d'Étampes</div>
+                                <div class="partner-desc">
+                                    Mairie d'Étampes.
+                                </div>
+                                <a class="partner-link" href="http://www.mairie-etampes.fr" target="_blank" rel="noopener noreferrer">mairie-etampes.fr &rarr;</a>
+                            </article>
+                        </div>
                     </div>
-                    <br/>
-                    <div style="width: 100%;">
-                        <table class="position-relative">
-                            <tbody>
-                            -->
-                            <tr>
-                                <td width="5%"></td>
-                                <td width="35%" style="text-align: left;">
-                                    <a class="link" href="https://camillerenard91.wixsite.com/artsetvous" target="_blank" rel="noopener noreferrer">
-                                        <img loading="lazy" src="./img/partenaire/arts-et-vous.png" alt="Arts et vous" width="160"/>
+
+                    <h3 class="partners-group-title">Associations &amp; patrimoine local</h3>
+
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-4 mb-4">
+                            <article class="partner-card">
+                                <div class="partner-logo">
+                                    <a href="http://www.etampes-histoire.fr" target="_blank" rel="noopener noreferrer">
+                                        <img loading="lazy" src="./img/partenaire/etampes-histoire.png" alt="Étampes Histoire"/>
                                     </a>
-                                </td>
-                                <td width="55%" style="text-align: left">
-                                    <a href="https://camillerenard91.wixsite.com/artsetvous" target="_blank" rel="noopener noreferrer">Arts & vous</a> : BLOG élèves | Arts & Vous
-                                </td>
-                                <td width="5%"></td>
-                            </tr>
-                            <tr>
-                                <td colspan="4" height="60"></td>
-                            </tr>
-                            <tr>
-                                <td width="5%"></td>
-                                <td width="35%" style="text-align: left;">
-                                    <a class="link" href="https://www.siarce.fr" target="_blank" rel="noopener noreferrer">
-                                        <img loading="lazy" src="./img/partenaire/logo-siarce.jpg" alt="Siarce" width="160"/>
+                                </div>
+                                <div class="partner-name">Étampes Histoire</div>
+                                <div class="partner-desc">
+                                    Association d'histoire locale étampoise.
+                                </div>
+                                <a class="partner-link" href="http://www.etampes-histoire.fr" target="_blank" rel="noopener noreferrer">etampes-histoire.fr &rarr;</a>
+                            </article>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 mb-4">
+                            <article class="partner-card">
+                                <div class="partner-logo">
+                                    <a href="https://etrechyetsonpasse.fr/" target="_blank" rel="noopener noreferrer">
+                                        <img loading="lazy" src="./img/partenaire/etrechy.png" alt="Étréchy et son passé"/>
                                     </a>
-                                </td>
-                                <td width="55%" style="text-align: left">
-                                    <a href="https://www.siarce.fr" target="_blank" rel="noopener noreferrer">Siarce</a> : Syndicat Intercommunal d'Aménagement, de Rivières et du Cycle de l'Eau
-                                </td>
-                                <td width="5%"></td>
-                            </tr>
-                            <tr>
-                                <td colspan="4" height="30"></td>
-                            </tr>
-                            <tr>
-                                <td width="5%"></td>
-                                <td width="35%" style="text-align: left;">
-                                    <a class="link" href="https://www.syage.org" target="_blank" rel="noopener noreferrer">
-                                        <img loading="lazy" src="./img/partenaire/syage.png" alt="Syage" width="160"/>
+                                </div>
+                                <div class="partner-name">Étréchy et son passé</div>
+                                <div class="partner-desc">
+                                    Valorisation du patrimoine d'Étréchy.
+                                </div>
+                                <a class="partner-link" href="https://etrechyetsonpasse.fr/" target="_blank" rel="noopener noreferrer">etrechyetsonpasse.fr &rarr;</a>
+                            </article>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 mb-4">
+                            <article class="partner-card">
+                                <div class="partner-logo">
+                                    <a href="http://apaviedourdan.free.fr/lavoirs.html" target="_blank" rel="noopener noreferrer">
+                                        <img loading="lazy" src="./img/partenaire/amis-de-l-orge.png" alt="APAVIE - Amis de l'Orge"/>
                                     </a>
-                                </td>
-                                <td width="55%" style="text-align: left">
-                                    <a href="https://www.syage.org" target="_blank" rel="noopener noreferrer">Syage</a> : Ensemble protégeons la ressource en eau
-                                </td>
-                                <td width="5%"></td>
-                            </tr>
-                            <tr>
-                                <td colspan="4" height="30"></td>
-                            </tr>
-                            <tr>
-                                <td width="5%"></td>
-                                <td width="35%" style="text-align: left;">
-                                    <a class="link" href="http://apaviedourdan.free.fr/lavoirs.html" target="_blank" rel="noopener noreferrer">
-                                        <img loading="lazy" src="./img/partenaire/amis-de-l-orge.png" alt="Amis de l'Orge" width="160"/>
+                                </div>
+                                <div class="partner-name">APAVIE – Amis de l'Orge</div>
+                                <div class="partner-desc">
+                                    Les lavoirs et berges de l'Orge à Dourdan.
+                                </div>
+                                <a class="partner-link" href="http://apaviedourdan.free.fr/lavoirs.html" target="_blank" rel="noopener noreferrer">apaviedourdan.free.fr &rarr;</a>
+                            </article>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 mb-4">
+                            <article class="partner-card">
+                                <div class="partner-logo">
+                                    <a href="http://www.facebook.com/patrimoinedeLong/" target="_blank" rel="noopener noreferrer">
+                                        <img loading="lazy" src="./img/partenaire/patrimoine-de-long.png" alt="Patrimoine de Long"/>
                                     </a>
-                                </td>
-                                <td width="55%" style="text-align: left">
-                                    <a href="http://apaviedourdan.free.fr/lavoirs.html" target="_blank" rel="noopener noreferrer">Les lavoirs et berges de l'Orge à Dourdan (APAVIE)</a>
-                                </td>
-                                <td width="5%"></td>
-                            </tr>
-                            <tr>
-                                <td colspan="4" height="30"></td>
-                            </tr>
-                            <tr>
-                                <td width="5%"></td>
-                                <td width="35%" style="text-align: left;">
-                                    <a class="link" href="http://www.facebook.com/patrimoinedeLong/" target="_blank" rel="noopener noreferrer">
-                                        <img loading="lazy" src="./img/partenaire/patrimoine-de-long.png" alt="Patrimoine de Long" width="160"/>
+                                </div>
+                                <div class="partner-name">Patrimoine de Long</div>
+                                <div class="partner-desc">
+                                    Valorisation du patrimoine de la commune de Long.
+                                </div>
+                                <a class="partner-link" href="http://www.facebook.com/patrimoinedeLong/" target="_blank" rel="noopener noreferrer">facebook.com/patrimoinedeLong &rarr;</a>
+                            </article>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 mb-4">
+                            <article class="partner-card">
+                                <div class="partner-logo">
+                                    <a href="http://www.montgeron-environnement.fr" target="_blank" rel="noopener noreferrer">
+                                        <img loading="lazy" src="./img/partenaire/montgeron.png" alt="Montgeron Environnement"/>
                                     </a>
-                                </td>
-                                <td width="55%" style="text-align: left">
-                                    <a href="http://www.facebook.com/patrimoinedeLong/" target="_blank" rel="noopener noreferrer">www.facebook.com/patrimoinedeLong</a>
-                                </td>
-                                <td width="5%"></td>
-                            </tr>
-                            <tr>
-                                <td colspan="4" height="30"></td>
-                            </tr>
-                            <tr>
-                                <td width="5%"></td>
-                                <td width="35%" style="text-align: left;">
-                                    <a class="link" href="http://www.montgeron-environnement.fr" target="_blank" rel="noopener noreferrer">
-                                        <img loading="lazy" src="./img/partenaire/montgeron.png" alt="Montgeron Environnement" width="160"/>
+                                </div>
+                                <div class="partner-name">Montgeron Environnement</div>
+                                <div class="partner-desc">
+                                    Protection de l'environnement à Montgeron.
+                                </div>
+                                <a class="partner-link" href="http://www.montgeron-environnement.fr" target="_blank" rel="noopener noreferrer">montgeron-environnement.fr &rarr;</a>
+                            </article>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 mb-4">
+                            <article class="partner-card">
+                                <div class="partner-logo">
+                                    <a href="https://camillerenard91.wixsite.com/artsetvous" target="_blank" rel="noopener noreferrer">
+                                        <img loading="lazy" src="./img/partenaire/arts-et-vous.png" alt="Arts &amp; Vous"/>
                                     </a>
-                                </td>
-                                <td width="55%" style="text-align: left">
-                                    <a href="http://www.montgeron-environnement.fr" target="_blank" rel="noopener noreferrer">www.montgeron-environnement.fr</a>
-                                </td>
-                                <td width="5%"></td>
-                            </tr>
-                            <tr>
-                                <td colspan="4" height="30"></td>
-                            </tr>
-                            <tr>
-                                <td width="5%"></td>
-                                <td width="35%" style="text-align: left;">
-                                    <a class="link" href="http://www.mairie-etampes.fr" target="_blank" rel="noopener noreferrer">
-                                        <img loading="lazy" src="./img/partenaire/etampes.png" alt="Etampes" width="160"/>
-                                    </a>
-                                </td>
-                                <td width="55%" style="text-align: left">
-                                    <a href="http://www.mairie-etampes.fr" target="_blank" rel="noopener noreferrer">www.mairie-etampes.fr</a>
-                                </td>
-                                <td width="5%"></td>
-                            </tr>
-                            <tr>
-                                <td colspan="4" height="30"></td>
-                            </tr>
-                            <tr>
-                                <td width="5%"></td>
-                                <td width="35%" style="text-align: left;">
-                                    <a class="link" href="http://www.etampes-histoire.fr" target="_blank" rel="noopener noreferrer">
-                                        <img loading="lazy" src="./img/partenaire/etampes-histoire.png" alt="Etampes Histoire" width="160"/>
-                                    </a>
-                                </td>
-                                <td width="55%" style="text-align: left">
-                                    <a href="http://www.etampes-histoire.fr" target="_blank" rel="noopener noreferrer">www.etampes-histoire.fr</a>
-                                </td>
-                                <td width="5%"></td>
-                            </tr>
-                            <tr>
-                                <td colspan="4" height="30"></td>
-                            </tr>
-                            <tr>
-                                <td width="5%"></td>
-                                <td width="35%" style="text-align: left;">
-                                    <a class="link" href="https://etrechyetsonpasse.fr/" target="_blank" rel="noopener noreferrer">
-                                        <img loading="lazy" src="./img/partenaire/etrechy.png" alt="Etrechy et son passé" width="160"/>
-                                    </a>
-                                </td>
-                                <td width="55%" style="text-align: left">
-                                    <a href="https://etrechyetsonpasse.fr/" target="_blank" rel="noopener noreferrer">Etrechy et son passé</a>
-                                </td>
-                                <td width="5%"></td>
-                            </tr>
-                            <tr>
-                                <td colspan="4" height="30"></td>
-                            </tr>
-                            </tbody>
-                        </table>
+                                </div>
+                                <div class="partner-name">Arts &amp; Vous</div>
+                                <div class="partner-desc">
+                                    Blog élèves – Arts &amp; Vous.
+                                </div>
+                                <a class="partner-link" href="https://camillerenard91.wixsite.com/artsetvous" target="_blank" rel="noopener noreferrer">camillerenard91.wixsite.com &rarr;</a>
+                            </article>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>

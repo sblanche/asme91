@@ -21,6 +21,112 @@
   <!-- Custom styles for this template -->
   <link href="css/business-casual.min.css" rel="stylesheet">
 
+  <style>
+      .president-letter {
+          font-family: 'Lora', serif;
+      }
+      .president-letter .letter-meta {
+          font-family: 'Raleway', sans-serif;
+          font-size: 0.85rem;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          color: #8b5e00;
+          font-weight: 700;
+          margin-bottom: 0.5rem;
+      }
+      .president-letter .letter-greeting {
+          font-family: 'Raleway', sans-serif;
+          font-weight: 600;
+          font-size: 1.2rem;
+          color: #2e1702;
+          margin-bottom: 1.5rem;
+          border-left: 3px solid #c97f00;
+          padding-left: 1rem;
+      }
+      .president-letter p {
+          font-size: 1.05rem;
+          line-height: 1.7;
+          color: #333;
+          margin-bottom: 1rem;
+      }
+      .president-letter .letter-highlight {
+          background-color: rgba(255, 248, 220, 0.6);
+          border-left: 4px solid #c97f00;
+          padding: 1rem 1.25rem;
+          margin: 1.5rem 0;
+          border-radius: 0.25rem;
+          font-weight: 500;
+      }
+      .president-letter .letter-signature {
+          margin-top: 2rem;
+          padding-top: 1.5rem;
+          border-top: 1px solid rgba(165, 164, 170, 0.4);
+          font-family: 'Raleway', sans-serif;
+      }
+      .president-letter .letter-signature .signature-name {
+          font-weight: 700;
+          font-size: 1.1rem;
+          color: #2e1702;
+      }
+      .president-letter .letter-signature .signature-role {
+          font-size: 0.95rem;
+          color: #666;
+      }
+      .president-letter .letter-signature .signature-date {
+          font-size: 0.85rem;
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+          color: #8b5e00;
+          margin-top: 0.25rem;
+      }
+
+      .archive-title {
+          font-family: 'Raleway', sans-serif;
+          font-weight: 700;
+          font-size: 1.2rem;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          color: #8b5e00;
+          border-bottom: 2px solid rgba(165, 164, 170, 0.5);
+          padding-bottom: 0.5rem;
+          margin: 2.5rem 0 1.25rem;
+      }
+      .archive-letter {
+          display: flex;
+          align-items: center;
+          background-color: rgba(255, 255, 255, 0.6);
+          border-left: 3px solid #a5a4aa;
+          padding: 0.85rem 1.1rem;
+          margin-bottom: 0.6rem;
+          border-radius: 0.25rem;
+          text-decoration: none;
+          transition: background-color 0.2s ease, border-left-color 0.2s ease, transform 0.2s ease;
+      }
+      .archive-letter:hover {
+          background-color: rgba(255, 250, 240, 0.9);
+          border-left-color: #c97f00;
+          transform: translateX(3px);
+          text-decoration: none;
+      }
+      .archive-letter .archive-date {
+          font-family: 'Raleway', sans-serif;
+          font-weight: 700;
+          font-size: 0.9rem;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          color: #8b5e00;
+          min-width: 180px;
+      }
+      .archive-letter .archive-label {
+          color: #2e1702;
+          font-family: 'Lora', serif;
+      }
+      @media (max-width: 576px) {
+          .archive-letter { flex-direction: column; align-items: flex-start; }
+          .archive-letter .archive-date { min-width: 0; margin-bottom: 0.2rem; }
+      }
+  </style>
+
 </head>
 
 <body>
@@ -52,7 +158,7 @@
             <a class="nav-link text-uppercase text-expanded" href="evenements.html">Ev&egrave;nements</a>
           </li>
           <li class="nav-item px-lg-3 active">
-            <a class="nav-link text-uppercase text-expanded" href="le-mot-du-president">Le mot du pr&eacute;sident</a>
+            <a class="nav-link text-uppercase text-expanded" href="le-mot-du-president.html">Le mot du pr&eacute;sident</a>
           </li>
           <li class="nav-item px-lg-3">
             <a class="nav-link text-uppercase text-expanded" href="partenaires.html">Partenaires</a>
@@ -76,31 +182,71 @@
                 <span class="section-heading-upper">Jean-Jacques</span>
                 <span class="section-heading-lower">Renard</span>
               </h2>
-              <br/><br/>
-              <h4>Mesdames et Messieurs les Parlementaires du département de l’Essonne,</h4>
-              <br/>
-              <p>En tant que président de l’Association pour la Sauvegarde des Moulins de l’Essonne je souhaite bon courage aux nouveaux élus et réitère mes encouragements aux plus anciens.</p>
-              <p>Nous avons besoin de vous comme vous avez besoin de nous.</p>
-              <p>Vous êtes notre porte-parole dans les débats parlementaires et, soutenus par la FFAM, nous sommes à votre disposition pour les alimenter.</p>
-              <p><b>Nos rivières sont en danger.</b> Notre département est l’un des plus riches de France en cours d’eau : plus de 400 km !</p>
-              <p>L’Essonne n’est pas VERSAILLES <b>MAIS</b> en réhabilitant les ouvrages du peu de moulins à eau qui nous reste nous pourrions fournir de l’électricité pour les habitations, voitures et vélos des riverains.</p>
-              <p>L’Essonne n’est pas VENISE <b>MAIS</b> en privant d’eau les pieds de nos moulins ils vont se fissurer puis s’effondrer comme d’ailleurs les châteaux ou belles demeures construits près des marais.</p>
-              <p>Les franciliens pendant dix siècles ont entretenu et aménagé nos rivières pour le bien de tous et aujourd’hui en poursuivant la « renaturation » de nos cours d’eau une partie de notre patrimoine bâti va disparaître ! </p>
-              <p>Dans quelques années nous réintroduirons des castors, véritables ingénieurs de l’environnement, pour préserver l'eau dans les bassins versants et régulariser leur cours. C’est un retour à la préhistoire !</p>
-              <p>Merci de prendre en compte notre alerte et n’hésitez pas à nous contacter pour plus d’informations.</p>
-              <p>Respectueusement,</p>
-              <br/>
-              <p>🦊 Jean-Jacques Renard, Président de l’ASME 91.</p>
-              <p>Le 14 juillet 2024</p>
-              <br/>
-              <br/>
 
-              <a href="./le-mot-du-president-8-mai-2024.html">Consulter le précedent mot du président du 8 mai 2024</a><br/>
-              <a href="./le-mot-du-president-22-fevrier-2023.html">Consulter le précédent mot du président du 22 février 2023</a><br/>
-              <a href="./le-mot-du-president-21-avril-2022.html">Consulter le précédent mot du pr&eacute;sident du 21 avril 2022</a><br/>
-              <a href="./le-mot-du-president-8-janvier-2022.html">Consulter le précédent mot du pr&eacute;sident du 8 janvier 2022</a><br/>
-              <a href="./le-mot-du-president-13-septembre-2021.html">Consulter le précédent mot du président du 13 septembre 2021</a><br/>
-              <a href="./le-mot-du-president-10-decembre-2020.html">Consulter le précédent mot du président du 10 décembre 2020</a><br/>
+              <article class="president-letter">
+                <div class="letter-meta">Le 14 juillet 2024</div>
+                <p class="letter-greeting">Mesdames et Messieurs les Parlementaires du département de l'Essonne,</p>
+
+                <p>En tant que président de l'Association pour la Sauvegarde des Moulins de l'Essonne, je souhaite bon courage aux nouveaux élus et réitère mes encouragements aux plus anciens.</p>
+                <p>Nous avons besoin de vous comme vous avez besoin de nous.</p>
+                <p>Vous êtes notre porte-parole dans les débats parlementaires et, soutenus par la FFAM, nous sommes à votre disposition pour les alimenter.</p>
+
+                <div class="letter-highlight">
+                  <p class="mb-0"><strong>Nos rivières sont en danger.</strong> Notre département est l'un des plus riches de France en cours d'eau : plus de 400 km !</p>
+                </div>
+
+                <p>L'Essonne n'est pas VERSAILLES <strong>MAIS</strong> en réhabilitant les ouvrages du peu de moulins à eau qui nous reste nous pourrions fournir de l'électricité pour les habitations, voitures et vélos des riverains.</p>
+                <p>L'Essonne n'est pas VENISE <strong>MAIS</strong> en privant d'eau les pieds de nos moulins ils vont se fissurer puis s'effondrer comme d'ailleurs les châteaux ou belles demeures construits près des marais.</p>
+                <p>Les Franciliens pendant dix siècles ont entretenu et aménagé nos rivières pour le bien de tous et aujourd'hui, en poursuivant la « renaturation » de nos cours d'eau, une partie de notre patrimoine bâti va disparaître !</p>
+                <p>Dans quelques années nous réintroduirons des castors, véritables ingénieurs de l'environnement, pour préserver l'eau dans les bassins versants et régulariser leur cours. C'est un retour à la préhistoire !</p>
+                <p>Merci de prendre en compte notre alerte et n'hésitez pas à nous contacter pour plus d'informations.</p>
+                <p>Respectueusement,</p>
+
+                <div class="letter-signature">
+                  <div class="signature-name">🦊 Jean-Jacques Renard</div>
+                  <div class="signature-role">Président de l'ASME 91</div>
+                  <div class="signature-date">Le 14 juillet 2024</div>
+                </div>
+              </article>
+
+              <h3 class="archive-title">Les mots précédents</h3>
+
+              <a class="archive-letter" href="./le-mot-du-president-8-mai-2024.html">
+                <span class="archive-date">8 mai 2024</span>
+                <span class="archive-label">Mot du président</span>
+              </a>
+              <a class="archive-letter" href="./le-mot-du-president-22-fevrier-2023.html">
+                <span class="archive-date">22 février 2023</span>
+                <span class="archive-label">Mot du président</span>
+              </a>
+              <a class="archive-letter" href="./le-mot-du-president-21-avril-2022.html">
+                <span class="archive-date">21 avril 2022</span>
+                <span class="archive-label">Mot du président</span>
+              </a>
+              <a class="archive-letter" href="./le-mot-du-president-8-janvier-2022.html">
+                <span class="archive-date">8 janvier 2022</span>
+                <span class="archive-label">Mot du président</span>
+              </a>
+              <a class="archive-letter" href="./le-mot-du-president-13-septembre-2021.html">
+                <span class="archive-date">13 septembre 2021</span>
+                <span class="archive-label">Mot du président</span>
+              </a>
+              <a class="archive-letter" href="./le-mot-du-president-10-decembre-2020.html">
+                <span class="archive-date">10 décembre 2020</span>
+                <span class="archive-label">Mot du président</span>
+              </a>
+              <a class="archive-letter" href="./le-mot-du-president-17-octobre-2020.html">
+                <span class="archive-date">17 octobre 2020</span>
+                <span class="archive-label">Mot du président</span>
+              </a>
+              <a class="archive-letter" href="./le-mot-du-president-30-juin-2020.html">
+                <span class="archive-date">30 juin 2020</span>
+                <span class="archive-label">Mot du président</span>
+              </a>
+              <a class="archive-letter" href="./le-mot-du-president-31-octobre-2019.html">
+                <span class="archive-date">31 octobre 2019</span>
+                <span class="archive-label">Mot du président</span>
+              </a>
 
             </div>
           </div>

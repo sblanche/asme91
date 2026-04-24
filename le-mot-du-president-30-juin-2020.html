@@ -5,10 +5,11 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="description" content="Mot du président de l'ASME 91 du 30 juin 2020 : billet d'humeur adressé au préfet de l'Essonne sur les nouvelles directives eau.">
+  <meta name="author" content="ASME 91">
+  <meta name="keywords" content="président, ASME 91, moulins, Essonne, directives eau, continuité écologique, billet d'humeur">
 
-  <title>ASME 91 - Le mot du pr&eacute;sident</title>
+  <title>ASME 91 - Le mot du pr&eacute;sident - 30 juin 2020</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -19,6 +20,177 @@
 
   <!-- Custom styles for this template -->
   <link href="css/business-casual.min.css" rel="stylesheet">
+
+  <style>
+      .president-letter {
+          font-family: 'Lora', serif;
+      }
+      .president-letter .letter-meta {
+          font-family: 'Raleway', sans-serif;
+          font-size: 0.85rem;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          color: #8b5e00;
+          font-weight: 700;
+          margin-bottom: 0.5rem;
+      }
+      .president-letter .letter-greeting {
+          font-family: 'Raleway', sans-serif;
+          font-weight: 600;
+          font-size: 1.2rem;
+          color: #2e1702;
+          margin-bottom: 1.5rem;
+          border-left: 3px solid #c97f00;
+          padding-left: 1rem;
+      }
+      .president-letter p {
+          font-size: 1.05rem;
+          line-height: 1.7;
+          color: #333;
+          margin-bottom: 1rem;
+      }
+      .president-letter .letter-highlight {
+          background-color: rgba(255, 248, 220, 0.6);
+          border-left: 4px solid #c97f00;
+          padding: 1rem 1.25rem;
+          margin: 1.5rem 0;
+          border-radius: 0.25rem;
+          font-weight: 500;
+      }
+      .president-letter .letter-benefits {
+          background-color: rgba(255, 255, 255, 0.5);
+          border: 1px solid rgba(201, 127, 0, 0.25);
+          border-radius: 0.35rem;
+          padding: 1.25rem 1.5rem;
+          margin: 1.5rem 0;
+      }
+      .president-letter .letter-benefits .letter-benefits-title {
+          font-family: 'Raleway', sans-serif;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+          font-size: 0.9rem;
+          color: #8b5e00;
+          margin-bottom: 0.75rem;
+      }
+      .president-letter .letter-benefits ul {
+          list-style: none;
+          padding-left: 0;
+          margin-bottom: 0;
+      }
+      .president-letter .letter-benefits ul li {
+          position: relative;
+          padding-left: 1.75rem;
+          margin-bottom: 0.6rem;
+          line-height: 1.55;
+          color: #333;
+      }
+      .president-letter .letter-benefits ul li::before {
+          content: "⚙";
+          position: absolute;
+          left: 0;
+          color: #c97f00;
+          font-size: 1.1rem;
+          line-height: 1.4;
+      }
+      .president-letter .letter-postscript {
+          font-size: 0.9rem;
+          color: #666;
+          font-style: italic;
+          border-top: 1px dashed rgba(165, 164, 170, 0.5);
+          padding-top: 1rem;
+          margin-top: 1.5rem;
+      }
+      .president-letter .letter-signature {
+          margin-top: 2rem;
+          padding-top: 1.5rem;
+          border-top: 1px solid rgba(165, 164, 170, 0.4);
+          font-family: 'Raleway', sans-serif;
+      }
+      .president-letter .letter-signature .signature-name {
+          font-weight: 700;
+          font-size: 1.1rem;
+          color: #2e1702;
+      }
+      .president-letter .letter-signature .signature-role {
+          font-size: 0.95rem;
+          color: #666;
+      }
+      .president-letter .letter-signature .signature-date {
+          font-size: 0.85rem;
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+          color: #8b5e00;
+          margin-top: 0.25rem;
+      }
+
+      .archive-title {
+          font-family: 'Raleway', sans-serif;
+          font-weight: 700;
+          font-size: 1.2rem;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          color: #8b5e00;
+          border-bottom: 2px solid rgba(165, 164, 170, 0.5);
+          padding-bottom: 0.5rem;
+          margin: 2.5rem 0 1.25rem;
+      }
+      .archive-letter {
+          display: flex;
+          align-items: center;
+          background-color: rgba(255, 255, 255, 0.6);
+          border-left: 3px solid #a5a4aa;
+          padding: 0.85rem 1.1rem;
+          margin-bottom: 0.6rem;
+          border-radius: 0.25rem;
+          text-decoration: none;
+          transition: background-color 0.2s ease, border-left-color 0.2s ease, transform 0.2s ease;
+      }
+      .archive-letter:hover {
+          background-color: rgba(255, 250, 240, 0.9);
+          border-left-color: #c97f00;
+          transform: translateX(3px);
+          text-decoration: none;
+      }
+      .archive-letter .archive-date {
+          font-family: 'Raleway', sans-serif;
+          font-weight: 700;
+          font-size: 0.9rem;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          color: #8b5e00;
+          min-width: 180px;
+      }
+      .archive-letter .archive-label {
+          color: #2e1702;
+          font-family: 'Lora', serif;
+      }
+      .back-link {
+          display: inline-flex;
+          align-items: center;
+          font-family: 'Raleway', sans-serif;
+          font-size: 0.9rem;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+          color: #8b5e00;
+          text-decoration: none;
+          margin-bottom: 1.5rem;
+      }
+      .back-link:hover {
+          color: #c97f00;
+          text-decoration: none;
+      }
+      .back-link::before {
+          content: "←";
+          margin-right: 0.5rem;
+          font-size: 1.1rem;
+      }
+      @media (max-width: 576px) {
+          .archive-letter { flex-direction: column; align-items: flex-start; }
+          .archive-letter .archive-date { min-width: 0; margin-bottom: 0.2rem; }
+      }
+  </style>
 
 </head>
 
@@ -71,43 +243,69 @@
         <div class="row">
           <div class="col-xl-9 col-lg-10 mx-auto">
             <div class="bg-faded rounded p-5">
+              <a href="le-mot-du-president.html" class="back-link">Retour au mot du président</a>
               <h2 class="section-heading mb-4">
                 <span class="section-heading-upper">Jean-Jacques</span>
                 <span class="section-heading-lower">Renard</span>
               </h2>
-              <p>Sauvons nos moulins</p>
-              <br/>
-              <p>Avez-vous entendu parler des « nouvelles directives sur l’eau » ?</p>
-              <br/>
-              <p>Leurs auteurs sont « des pantins, dont toute la science tient dans la cravate » et chacun y va de sa propre interprétation ! Ils peuvent s'attaquer à tout moment à toutes les petites rivières (comme l’Ecole ou la Juine) qui ont fait tourner des moulins depuis des siècles en assurant ainsi la prospérité, ou au moins la survie, des villes et villages qu'elles arrosaient...</p>
-              <p>Avec l'alibi écologiste ils voudraient arraser les barrages édifiés depuis l'Antiquité pour faire tourner nos moulins… Ils appellent cela « rendre à la rivière son aspect "naturel" » ! Comme si on pouvait connaître l'état "naturel" de ces rivières ! Peut-être faut-il remonter aux origines de l'Homme qui, tout comme le castor, a colonisé très tôt systématiquement les cours d'eau et forcément aliéné un peu leur "continuité écologique". Et je pense que les mêmes, comme moi, encouragent la réintroduction des castors sur la Juine !</p>
-              <br/>
-              <p>Pensez-vous qu’un barrage de rivière est forcément un obstacle insurmontable pour les poissons migrateurs ?  Si c’était le cas il y a bien longtemps qu’il n’y aurait plus aucun saumon !</p>
-              <p>Il ne faut pas oublier que ces petits barrages sont un atout :</p>
-              <ul>
-                <li>pour remonter le niveau les nappes phréatiques,</li>
-                <li>pour laisser l'eau se décanter des impuretés qu'elle emmènerait en aval,</li>
-                <li>pour constituer des réserves d'eau bien utiles,</li>
-                <li>pour apporter une certaine maîtrise des crues,</li>
-                <li>pour accueillir du poisson qui y trouve les bonnes conditions pour sa reproduction,</li>
-                <li>pour produire une énergie non polluante qui participe à l'indépendance énergétique du pays...</li>
-                <li>pour sauvegarder nos moulins, nos lavoirs, nos quais et nos ponts (ils en assurent la stabilité qui disparaîtrait suite à l'accélération du courant et à l'abaissement du lit de nos rivières).</li>
-              </ul>
-              <p>Attention petits propriétaires de vieux moulins vous êtes devenus une cible !</p>
-              <p>Ce n'est pas en exécutant « leurs ordonnances » que vous rendrez à leur eau sa qualité chimique d'origine (que l’on ne connaît pas d’ailleurs)… Par contre il n’est pas question de toucher à ceux (industriels ou agriculteurs) qui y déversent toutes sortes de poisons !</p>
-              <p>Permettre la remontée des espèces migratrices, on sait le faire depuis le Moyen-Âge avec des systèmes de mieux en mieux conçus. Pour garder une bonne qualité chimique à l'eau il suffit de prendre et faire respecter des dispositions légales et pratiques concernant les produits que l'on utilise dans le sol.</p>
-              <p>Rien ne justifie donc de toucher aux ouvrages appartenant à nos moulins qui peuvent encore, comme nous l’avons vu, rendre de grands services.
-              <p>Soyons solidaires de la sauvegarde des moulins en Essonne !</p>
-              <br/>
-              (Extrait du « billet d’humeur » envoyé au préfet de l’Essonne s/c de Mme Florence Vilnius Sous-Préfète à Etampes)</p>
-              <br/>
-              <br/>
-              <br/>
-              <p class="small">Le 30 juin 2020.</p>
-              <br/>
-              <br/>
-              <br/>
-              <a href="./le-mot-du-president-31-octobre-2019.html">Voir le pr&eacute;c&eacute;dent mot du pr&eacute;sident du 31 octobre 2019</a>
+
+              <article class="president-letter">
+                <div class="letter-meta">Le 30 juin 2020</div>
+                <p class="letter-greeting">Sauvons nos moulins</p>
+
+                <p>Avez-vous entendu parler des « nouvelles directives sur l'eau » ?</p>
+
+                <p>Leurs auteurs sont « des pantins, dont toute la science tient dans la cravate » et chacun y va de sa propre interprétation ! Ils peuvent s'attaquer à tout moment à toutes les petites rivières (comme l'École ou la Juine) qui ont fait tourner des moulins depuis des siècles en assurant ainsi la prospérité, ou au moins la survie, des villes et villages qu'elles arrosaient…</p>
+
+                <p>Avec l'alibi écologiste ils voudraient arraser les barrages édifiés depuis l'Antiquité pour faire tourner nos moulins… Ils appellent cela <em>« rendre à la rivière son aspect "naturel" »</em> ! Comme si on pouvait connaître l'état "naturel" de ces rivières ! Peut-être faut-il remonter aux origines de l'Homme qui, tout comme le castor, a colonisé très tôt systématiquement les cours d'eau et forcément aliéné un peu leur "continuité écologique". Et je pense que les mêmes, comme moi, encouragent la réintroduction des castors sur la Juine !</p>
+
+                <div class="letter-highlight">
+                  <p class="mb-0">Pensez-vous qu'un barrage de rivière est forcément un obstacle insurmontable pour les poissons migrateurs ? <strong>Si c'était le cas il y a bien longtemps qu'il n'y aurait plus aucun saumon !</strong></p>
+                </div>
+
+                <div class="letter-benefits">
+                  <div class="letter-benefits-title">Les petits barrages, un atout pour :</div>
+                  <ul>
+                    <li>remonter le niveau des nappes phréatiques,</li>
+                    <li>laisser l'eau se décanter des impuretés qu'elle emmènerait en aval,</li>
+                    <li>constituer des réserves d'eau bien utiles,</li>
+                    <li>apporter une certaine maîtrise des crues,</li>
+                    <li>accueillir du poisson qui y trouve les bonnes conditions pour sa reproduction,</li>
+                    <li>produire une énergie non polluante qui participe à l'indépendance énergétique du pays,</li>
+                    <li>sauvegarder nos moulins, nos lavoirs, nos quais et nos ponts (ils en assurent la stabilité qui disparaîtrait suite à l'accélération du courant et à l'abaissement du lit de nos rivières).</li>
+                  </ul>
+                </div>
+
+                <p><strong>Attention petits propriétaires de vieux moulins vous êtes devenus une cible !</strong></p>
+
+                <p>Ce n'est pas en exécutant « leurs ordonnances » que vous rendrez à leur eau sa qualité chimique d'origine (que l'on ne connaît pas d'ailleurs)… Par contre il n'est pas question de toucher à ceux (industriels ou agriculteurs) qui y déversent toutes sortes de poisons !</p>
+
+                <p>Permettre la remontée des espèces migratrices, on sait le faire depuis le Moyen-Âge avec des systèmes de mieux en mieux conçus. Pour garder une bonne qualité chimique à l'eau il suffit de prendre et faire respecter des dispositions légales et pratiques concernant les produits que l'on utilise dans le sol.</p>
+
+                <p>Rien ne justifie donc de toucher aux ouvrages appartenant à nos moulins qui peuvent encore, comme nous l'avons vu, rendre de grands services.</p>
+
+                <div class="letter-highlight">
+                  <p class="mb-0"><strong>Soyons solidaires de la sauvegarde des moulins en Essonne !</strong></p>
+                </div>
+
+                <div class="letter-postscript">
+                  Extrait du « billet d'humeur » envoyé au préfet de l'Essonne s/c de Mme Florence Vilnius, Sous-Préfète à Étampes.
+                </div>
+
+                <div class="letter-signature">
+                  <div class="signature-name">Jean-Jacques Renard</div>
+                  <div class="signature-role">Président de l'ASME 91</div>
+                  <div class="signature-date">Le 30 juin 2020</div>
+                </div>
+              </article>
+
+              <h3 class="archive-title">Les mots précédents</h3>
+
+              <a class="archive-letter" href="./le-mot-du-president-31-octobre-2019.html">
+                <span class="archive-date">31 octobre 2019</span>
+                <span class="archive-label">Mot du président</span>
+              </a>
+
             </div>
           </div>
         </div>
