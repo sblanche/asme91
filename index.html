@@ -21,16 +21,354 @@
   <!-- Custom styles for this template -->
   <link href="css/business-casual.min.css" rel="stylesheet">
 
+  <style>
+      /* Hero intro */
+      .home-tagline {
+          font-family: 'Raleway', sans-serif;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          font-size: 0.95rem;
+          color: #8b5e00;
+          margin-bottom: 0.5rem;
+      }
+      .home-lead {
+          font-family: 'Lora', serif;
+          font-size: 1.15rem;
+          line-height: 1.7;
+          color: #333;
+      }
+
+      /* Quick-access cards */
+      .quick-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+          gap: 1.25rem;
+          margin-top: 2rem;
+      }
+      .quick-card {
+          display: block;
+          background-color: rgba(255, 255, 255, 0.75);
+          border: 1px solid rgba(165, 164, 170, 0.5);
+          border-radius: 0.5rem;
+          padding: 1.5rem 1.25rem;
+          text-decoration: none;
+          color: inherit;
+          transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+          text-align: center;
+      }
+      .quick-card:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 6px 16px rgba(46, 23, 2, 0.12);
+          border-color: #c97f00;
+          text-decoration: none;
+          color: inherit;
+      }
+      .quick-card .quick-icon {
+          font-size: 2rem;
+          line-height: 1;
+          color: #c97f00;
+          margin-bottom: 0.75rem;
+      }
+      .quick-card .quick-title {
+          font-family: 'Raleway', sans-serif;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+          font-size: 0.95rem;
+          color: #2e1702;
+          margin-bottom: 0.35rem;
+      }
+      .quick-card .quick-desc {
+          font-family: 'Lora', serif;
+          font-size: 0.95rem;
+          color: #555;
+          line-height: 1.45;
+      }
+
+      /* Key figures */
+      .stats-band {
+          background-color: rgba(255, 250, 240, 0.9);
+          border-top: 1px solid rgba(201, 127, 0, 0.3);
+          border-bottom: 1px solid rgba(201, 127, 0, 0.3);
+          padding: 2rem 1rem;
+          margin: 3rem 0;
+          border-radius: 0.5rem;
+      }
+      .stats-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+          gap: 1.5rem;
+          text-align: center;
+      }
+      .stat-item .stat-value {
+          font-family: 'Raleway', sans-serif;
+          font-weight: 800;
+          font-size: 2.25rem;
+          color: #8b5e00;
+          line-height: 1;
+      }
+      .stat-item .stat-label {
+          font-family: 'Raleway', sans-serif;
+          font-size: 0.85rem;
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+          color: #2e1702;
+          margin-top: 0.5rem;
+      }
+
+      /* Join CTA */
+      .join-cta {
+          background: linear-gradient(135deg, rgba(201, 127, 0, 0.92), rgba(139, 94, 0, 0.92));
+          color: #fff;
+          border-radius: 0.5rem;
+          padding: 2.5rem 2rem;
+          text-align: center;
+          margin: 3rem 0;
+      }
+      .join-cta h3 {
+          font-family: 'Raleway', sans-serif;
+          font-weight: 800;
+          text-transform: uppercase;
+          letter-spacing: 0.12em;
+          font-size: 1.5rem;
+          margin-bottom: 0.75rem;
+      }
+      .join-cta p {
+          font-family: 'Lora', serif;
+          font-size: 1.05rem;
+          margin-bottom: 1.5rem;
+      }
+      .join-btn {
+          display: inline-block;
+          background-color: #fff;
+          color: #8b5e00;
+          padding: 0.85rem 2rem;
+          border-radius: 2rem;
+          font-family: 'Raleway', sans-serif;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          font-size: 0.95rem;
+          text-decoration: none;
+          transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      .join-btn:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+          color: #8b5e00;
+          text-decoration: none;
+      }
+
+      /* Teasers row */
+      .teaser-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: 1.5rem;
+          margin: 2rem 0;
+      }
+      .teaser-card {
+          display: block;
+          background-color: rgba(255, 255, 255, 0.8);
+          border: 1px solid rgba(165, 164, 170, 0.5);
+          border-radius: 0.5rem;
+          padding: 1.75rem;
+          text-decoration: none;
+          color: inherit;
+          transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      .teaser-card:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 6px 16px rgba(46, 23, 2, 0.12);
+          text-decoration: none;
+          color: inherit;
+      }
+      .teaser-card .teaser-kicker {
+          font-family: 'Raleway', sans-serif;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          font-size: 0.8rem;
+          color: #8b5e00;
+          margin-bottom: 0.5rem;
+      }
+      .teaser-card .teaser-title {
+          font-family: 'Raleway', sans-serif;
+          font-weight: 700;
+          font-size: 1.2rem;
+          color: #2e1702;
+          margin-bottom: 0.5rem;
+      }
+      .teaser-card .teaser-excerpt {
+          font-family: 'Lora', serif;
+          font-size: 0.95rem;
+          color: #555;
+          line-height: 1.55;
+          margin-bottom: 0.75rem;
+      }
+      .teaser-card .teaser-link {
+          font-family: 'Raleway', sans-serif;
+          font-weight: 600;
+          font-size: 0.85rem;
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+          color: #c97f00;
+      }
+      .teaser-card .teaser-link::after {
+          content: " →";
+      }
+
+      /* Project cards */
+      .projects-title {
+          font-family: 'Raleway', sans-serif;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          color: #8b5e00;
+          font-size: 1rem;
+          border-bottom: 2px solid rgba(165, 164, 170, 0.5);
+          padding-bottom: 0.5rem;
+          margin: 2rem 0 1.25rem;
+      }
+      .project-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+          gap: 1.25rem;
+      }
+      .project-card {
+          background-color: rgba(255, 255, 255, 0.8);
+          border-left: 4px solid #c97f00;
+          border-radius: 0.35rem;
+          padding: 1.25rem 1.35rem;
+      }
+      .project-card.support {
+          border-left-color: #a94442;
+          background-color: rgba(253, 244, 244, 0.85);
+      }
+      .project-card .project-icon {
+          font-size: 1.8rem;
+          color: #c97f00;
+          margin-bottom: 0.5rem;
+      }
+      .project-card.support .project-icon { color: #a94442; }
+      .project-card .project-name {
+          font-family: 'Raleway', sans-serif;
+          font-weight: 700;
+          font-size: 1.05rem;
+          color: #2e1702;
+          margin-bottom: 0.25rem;
+      }
+      .project-card .project-loc {
+          font-family: 'Raleway', sans-serif;
+          font-size: 0.8rem;
+          text-transform: uppercase;
+          letter-spacing: 0.06em;
+          color: #8b5e00;
+          margin-bottom: 0.5rem;
+      }
+      .project-card .project-theme {
+          font-family: 'Lora', serif;
+          font-style: italic;
+          color: #555;
+          font-size: 0.95rem;
+          margin-bottom: 0;
+      }
+
+      /* History timeline */
+      .history-title {
+          font-family: 'Raleway', sans-serif;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          color: #8b5e00;
+          font-size: 1rem;
+          border-bottom: 2px solid rgba(165, 164, 170, 0.5);
+          padding-bottom: 0.5rem;
+          margin: 2rem 0 1.5rem;
+      }
+      .history-timeline {
+          position: relative;
+          padding-left: 0;
+          list-style: none;
+          margin: 0;
+      }
+      .history-timeline::before {
+          content: "";
+          position: absolute;
+          left: 35px;
+          top: 10px;
+          bottom: 10px;
+          width: 2px;
+          background: linear-gradient(to bottom, #c97f00, rgba(201, 127, 0, 0.2));
+      }
+      .history-step {
+          display: flex;
+          align-items: center;
+          gap: 1.5rem;
+          margin-bottom: 1.75rem;
+          position: relative;
+      }
+      .history-step .history-marker {
+          flex: 0 0 72px;
+          width: 72px;
+          height: 72px;
+          background-color: rgba(255, 250, 240, 0.95);
+          border: 2px solid #c97f00;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          z-index: 1;
+          overflow: hidden;
+      }
+      .history-step .history-marker img {
+          max-width: 56px;
+          max-height: 56px;
+      }
+      .history-step .history-body {
+          flex: 1;
+          font-family: 'Lora', serif;
+          font-size: 1rem;
+          line-height: 1.6;
+          color: #333;
+      }
+      .history-step.final .history-marker {
+          border-color: #a94442;
+          background-color: rgba(253, 244, 244, 0.95);
+      }
+      .history-step.final .history-body {
+          font-family: 'Raleway', sans-serif;
+          font-weight: 800;
+          color: #a94442;
+          font-size: 1.2rem;
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+      }
+      @media (max-width: 576px) {
+          .history-step { flex-wrap: wrap; }
+          .history-timeline::before { left: 30px; }
+          .history-step .history-marker { flex: 0 0 60px; width: 60px; height: 60px; }
+          .history-step .history-marker img { max-width: 46px; max-height: 46px; }
+      }
+
+      .section-subtitle {
+          font-family: 'Raleway', sans-serif;
+          font-weight: 700;
+          font-size: 1.2rem;
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+          color: #2e1702;
+          margin: 1.5rem 0 1rem;
+      }
+  </style>
+
 </head>
 
 <body>
 
   <h1 class="site-heading text-center text-white d-none d-lg-block">
     <img loading="lazy" src="img/logo.jpg" alt="Logo" />
-    <!--
-    <span class="site-heading-upper text-primary mb-3">ASSOCIATION DE SAUVEGARDE DES MOULINS EN ESSONNE</span>
-    <span class="site-heading-lower">ASME 91</span>
-    -->
   </h1>
 
   <!-- Navigation -->
@@ -68,158 +406,235 @@
     </div>
   </nav>
 
+  <!-- HERO : intro + quick access cards -->
   <section class="page-section cta">
-      <div class="container">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-10 mx-auto">
+          <div class="cta-inner rounded">
+            <h2 class="section-heading mb-4 text-center">
+              <span class="section-heading-upper">Bienvenue à l'ASME 91</span>
+              <span class="section-heading-lower">Sauvegardons nos moulins</span>
+            </h2>
 
-          <div class="row" style="margin-bottom: 60px;">
-              <div class="col-xl-9 mx-auto">
-                  <div class="cta-inner text-center rounded">
-                      <h2 class="section-heading mb-4">
-                          <span class="section-heading-upper">Nous en deux trois mots ...</span>
-                          <span class="section-heading-lower">Et vous ?</span>
-                      </h2>
-                      <p class="mb-0 text-left">Bienvenue chez Nous à la découverte de la molinologie !<br/><br/>
-                          Notre association s'attache à la promotion et à la valorisation des moulins, troisième patrimoine de France.<br/>
-                          Adhérer à l'ASME c'est être à l'écoute de tous les riverains de la rivière Essonne et de ses affluents.<br/>
-                          Pour tous nous proposons une vie associative riche avec la diffusion de courriels sur l'actualité
-                          de nos rivières, la mise à jour trimestrielle de notre site, l'organisation de conférences, de visites et de découvertes de moulins.<br/>
-                          Avec l'aide de spécialistes nous accompagnons dans leurs démarches de valorisation et de restauration les propriétaires de moulins.<br/>
-                          Nous sommes affiliés à la Fédération Française des Associations pour la Sauvegarde des Moulins (<a class="stretched-link position-relative" href="https://www.moulinsdefrance.org/" target="_blank" rel="noopener noreferrer">FFAM</a>).<br/>
-                          Nous vous présentons les différents moulins existants : moulins à vent, à eau, à marée ou à vapeur, moulins à farine, à papier, à huile, à tan, à foulon, à poudre… (+ toutes sortes d’applications artisanales comme forges, scieries, menuiseries, chamoiseries…).<br/>
-                          Nous vous souhaitons une bonne visite à la découverte du monde des moulins !<br/><br/>
-                          Rejoignez-nous ! Sauvons nos moulins !</p>
-                  </div>
-              </div>
+            <div class="home-tagline text-center">Association de Sauvegarde des Moulins en Essonne · Affiliée à la FFAM</div>
+            <p class="home-lead text-center mb-4">
+              La molinologie est notre passion. Nous œuvrons pour la promotion et la valorisation des moulins de l'Essonne, troisième patrimoine de France, et défendons les riverains de la rivière Essonne et de ses affluents.
+            </p>
+
+            <div class="quick-grid">
+              <a class="quick-card" href="nos-rivieres.html">
+                <div class="quick-icon">〰</div>
+                <div class="quick-title">Nos rivières</div>
+                <div class="quick-desc">Essonne, Juine, Orge, École, Yvette, Bièvre…</div>
+              </a>
+              <a class="quick-card" href="nos-moulins.html">
+                <div class="quick-icon">⚙</div>
+                <div class="quick-title">Nos moulins</div>
+                <div class="quick-desc">À eau, à vent, à farine ou artisanaux.</div>
+              </a>
+              <a class="quick-card" href="evenements.html">
+                <div class="quick-icon">📅</div>
+                <div class="quick-title">Évènements</div>
+                <div class="quick-desc">Conférences, visites, assemblées et sorties.</div>
+              </a>
+              <a class="quick-card" href="le-mot-du-president.html">
+                <div class="quick-icon">🦊</div>
+                <div class="quick-title">Mot du président</div>
+                <div class="quick-desc">Actualités et engagements de l'ASME 91.</div>
+              </a>
+            </div>
           </div>
-
-          <div class="row" style="margin-bottom: 60px;">
-              <div class="col-xl-9 mx-auto">
-                  <div class="cta-inner text-center rounded" style="border-color: red;">
-                      <h2 class="section-heading mb-4">
-                          <span class="section-heading-upper" style="color: red;">SOUTIEN AUX PROJETS DE PETITE HYDRO&Eacute;LECTRICIT&Eacute; (VALL&Eacute;E DE LA JUINE)</span>
-                      </h2>
-                      <p class="mb-0">
-                          <span>LE MOULIN DE CHAGRENON (AUVERS-ST-GEORGES)</span>
-                      </p>
-                      <br/><br/>
-                      <h2 class="section-heading mb-4">
-                          <span class="section-heading-upper" style="color: red;">Nos Projets de restauration (Vallée de l'ORGE) :</span>
-                      </h2>
-                      <p class="mb-0">
-                          <span>LE MOULIN POISSARD (ROINVILLE) "Du Grain au Pain"</span><br/>
-                          <span>LE MOULIN DE LA MERCERIE (SERMAISE) "Lieu de Mémoire"</span><br/>
-                          <span>LE MOULIN DE LA BETE (OLLAINVILLE) "Visites Pédagogiques"</span><br/>
-                      Le dernier projet a été lancé le dimanche 25 juin dans cadre des <a class="stretched-link position-relative" href="./document/JPPM-2023-Ollainville.docx" target="_blank" rel="noopener noreferrer">JPPM 2023</a>.
-                      </p>
-                  </div>
-              </div>
-          </div>
-
+        </div>
       </div>
+    </div>
   </section>
 
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
+  <!-- KEY FIGURES -->
+  <section class="page-section pt-0">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-10 mx-auto">
+          <div class="stats-band">
+            <div class="stats-grid">
+              <div class="stat-item">
+                <div class="stat-value">400+</div>
+                <div class="stat-label">km de rivières<br/>en Essonne</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-value">3<sup style="font-size:1.25rem;">e</sup></div>
+                <div class="stat-label">patrimoine<br/>de France</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-value">10+</div>
+                <div class="stat-label">siècles d'histoire<br/>meunière</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-value">FFAM</div>
+                <div class="stat-label">fédération<br/>d'appartenance</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <section class="page-section">
-      <div class="container">
+  <!-- JOIN CTA -->
+  <section class="page-section pt-0">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-10 mx-auto">
+          <div class="join-cta">
+            <h3>Rejoignez-nous !</h3>
+            <p>Adhérer à l'ASME, c'est soutenir la préservation de nos rivières et de leur patrimoine meunier, recevoir nos courriels d'actualité et participer à nos conférences, visites et sorties.</p>
+            <a class="join-btn" href="contactez-nous.html">Adhérer à l'ASME 91</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEASERS : dernier mot du président + agenda -->
+  <section class="page-section pt-0">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-10 mx-auto">
+          <div class="teaser-grid">
+            <a class="teaser-card" href="le-mot-du-president.html">
+              <div class="teaser-kicker">Dernier mot du président · 14 juillet 2024</div>
+              <div class="teaser-title">Mesdames et Messieurs les Parlementaires de l'Essonne</div>
+              <p class="teaser-excerpt">Nos rivières sont en danger : plus de 400 km de cours d'eau dans le département et un patrimoine bâti à préserver. Notre alerte aux élus locaux et nationaux.</p>
+              <span class="teaser-link">Lire le mot du président</span>
+            </a>
+            <a class="teaser-card" href="evenements.html">
+              <div class="teaser-kicker">Agenda · saison 2025 – 2026</div>
+              <div class="teaser-title">Conférences, visites et assemblées</div>
+              <p class="teaser-excerpt">Samedis de l'Histoire à Étampes, Galette des Reines, ouverture des moulins, Forum des Associations, Congrès FFAM… Retrouvez l'ensemble de nos rendez-vous.</p>
+              <span class="teaser-link">Voir tous les évènements</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="page-section pt-0">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-10 mx-auto">
+          <div class="bg-faded rounded p-5">
+            <h2 class="section-heading text-center mb-4">
+              <span class="section-heading-upper">Nos engagements de terrain</span>
+              <span class="section-heading-lower">Projets soutenus &amp; restaurés</span>
+            </h2>
+
+            <h3 class="projects-title">Soutien aux projets de petite hydroélectricité — Vallée de la Juine</h3>
+            <div class="project-grid">
+              <div class="project-card support">
+                <div class="project-icon">⚡</div>
+                <div class="project-name">Moulin de Chagrenon</div>
+                <div class="project-loc">Auvers-Saint-Georges</div>
+                <p class="project-theme">Petite hydroélectricité</p>
+              </div>
+            </div>
+
+            <h3 class="projects-title">Projets de restauration — Vallée de l'Orge</h3>
+            <div class="project-grid">
+              <div class="project-card">
+                <div class="project-icon">🌾</div>
+                <div class="project-name">Moulin Poissard</div>
+                <div class="project-loc">Roinville</div>
+                <p class="project-theme">« Du Grain au Pain »</p>
+              </div>
+              <div class="project-card">
+                <div class="project-icon">🏛</div>
+                <div class="project-name">Moulin de la Mercerie</div>
+                <div class="project-loc">Sermaise</div>
+                <p class="project-theme">« Lieu de Mémoire »</p>
+              </div>
+              <div class="project-card">
+                <div class="project-icon">🎓</div>
+                <div class="project-name">Moulin de la Bête</div>
+                <div class="project-loc">Ollainville</div>
+                <p class="project-theme">« Visites Pédagogiques »</p>
+              </div>
+            </div>
+            <p class="mt-3 mb-0" style="font-size: 0.9rem; color: #666;">
+              Le dernier projet a été lancé le dimanche 25 juin 2023 dans le cadre des
+              <a href="./document/JPPM-2023-Ollainville.docx" target="_blank" rel="noopener noreferrer">JPPM 2023</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HISTORY TIMELINE -->
+  <section class="page-section pt-0">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-10 mx-auto">
           <div class="product-item">
-              <div class="product-item-title d-flex">
-                  <div class="bg-faded p-5 d-flex ml-auto rounded">
-                      <h2 class="section-heading mb-0">
-                          <span class="section-heading-upper">Les moulins en deux ou trois mots</span>
-                          <span class="section-heading-lower">Et nous !</span>
-                      </h2>
-                  </div>
+            <div class="product-item-title d-flex">
+              <div class="bg-faded p-5 d-flex ml-auto rounded">
+                <h2 class="section-heading mb-0">
+                  <span class="section-heading-upper">Les moulins en deux ou trois mots</span>
+                  <span class="section-heading-lower">Et nous !</span>
+                </h2>
               </div>
-              <img loading="lazy" class="product-item-img mx-auto d-flex rounded img-fluid mb-2 mb-lg-0" src="img/accueil.jpg" alt="Moulin Badran">
-              <div class="product-item-description d-flex mr-auto">
-                  <div class="bg-faded p-5 rounded">
-                      <p class="mb-3">L’histoire des moulins c’est aussi notre histoire.<br/>
-                          Dès le néolithique les hommes ont cultivé des céréales et, pour les consommer plus facilement, ils ont appris à les broyer puis à les moudre finement pour en faire de la farine (nourriture de base = galettes et bouillies).<br/>
-                          <div style="width: 100%;">
-                              <table class="position-relative">
-                                  <tbody>
-                                      <tr>
-                                          <td width="5%"></td>
-                                          <td width="20%" style="text-align: left;">
-                                              <p>
-                                                  <img loading="lazy" src="./img/schema-pilon-mortier.png" alt="Schéma" width="160"/>
-                                              </p>
-                                          </td>
-                                          <td width="55%" style="text-align: left">
-                                              Au début les grains sont écrasés entre deux pierres, puis nos ancêtres feront rouler une pierre ronde dans une pierre creuse avant d’inventer le pilon et son mortier ; ce n’est que plus tard qu’ils feront tourner une pierre cylindrique munie d’un manche sur une pierre (les grains sont introduits par le centre évidé de la meule supérieure).
-                                          </td>
-                                          <td width="5%"></td>
-                                      </tr>
-                                      <tr>
-                                          <td colspan="4" height="30"></td>
-                                      </tr>
-                                      <tr>
-                                          <td width="5%"></td>
-                                          <td width="20%" style="text-align: left;">
-                                              <p>
-                                                  <img loading="lazy" src="./img/meule.png" alt="Meule" width="160"/>
-                                              </p>
-                                          </td>
-                                          <td width="55%" style="text-align: left">
-                                              Pour augmenter la production on élargira la taille des meules qui seront actionnées par des esclaves ou des animaux (moulins à sang) et les découvertes de la force du vent et de la puissance de l’eau modifieront nos paysages pour augmenter la production...
-                                          </td>
-                                          <td width="5%"></td>
-                                      </tr>
-                                      <tr>
-                                          <td colspan="4" height="30"></td>
-                                      </tr>
-                                      <tr>
-                                          <td width="5%"></td>
-                                          <td width="20%" style="text-align: left;">
-                                              <p>
-                                                  <img loading="lazy" src="./img/mecanisme.png" alt="Mecanisme" width="160"/>
-                                              </p>
-                                          </td>
-                                          <td width="55%" style="text-align: left">
-                                                Une énergie locale et renouvelable.
-                                          </td>
-                                          <td width="5%"></td>
-                                      </tr>
-                                      <tr>
-                                          <td colspan="4" height="30"></td>
-                                      </tr>
-                                      <tr>
-                                          <td width="5%"></td>
-                                          <td width="20%" style="text-align: left;">
-                                              <p>
-                                                  <img loading="lazy" src="./img/stop-destruction.png" alt="Stop" width="160"/>
-                                              </p>
-                                          </td>
-                                          <td width="55%" style="text-align: left;color: red;font-size: 40px;">
-                                              STOP DESTRUCTION
-                                          </td>
-                                          <td width="5%"></td>
-                                      </tr>
-                                      <tr>
-                                          <td colspan="4" height="30"></td>
-                                      </tr>
-                                  </tbody>
-                              </table>
-                          </div>
-                      </p>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </section>
+            </div>
+            <img loading="lazy" class="product-item-img mx-auto d-flex rounded img-fluid mb-2 mb-lg-0" src="img/accueil.jpg" alt="Moulin Badran">
+            <div class="product-item-description d-flex mr-auto">
+              <div class="bg-faded p-5 rounded">
+                <p class="home-lead mb-3">
+                  L'histoire des moulins c'est aussi notre histoire. Dès le Néolithique, les hommes ont cultivé des céréales et, pour les consommer plus facilement, ils ont appris à les broyer puis à les moudre finement pour en faire de la farine — nourriture de base sous forme de galettes et bouillies.
+                </p>
 
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
+                <h3 class="history-title">Une énergie locale et renouvelable, dix mille ans d'histoire</h3>
+
+                <ol class="history-timeline">
+                  <li class="history-step">
+                    <div class="history-marker">
+                      <img loading="lazy" src="./img/schema-pilon-mortier.png" alt="Schéma pilon et mortier"/>
+                    </div>
+                    <div class="history-body">
+                      Au début, les grains sont écrasés entre deux pierres. Puis nos ancêtres font rouler une pierre ronde dans une pierre creuse avant d'inventer le <strong>pilon et son mortier</strong>.
+                    </div>
+                  </li>
+                  <li class="history-step">
+                    <div class="history-marker">
+                      <img loading="lazy" src="./img/meule.png" alt="Meule"/>
+                    </div>
+                    <div class="history-body">
+                      Pour augmenter la production, on élargit la taille des <strong>meules</strong>, actionnées par des esclaves ou des animaux (les « moulins à sang »). La découverte de la force du vent et de la puissance de l'eau va modifier durablement nos paysages.
+                    </div>
+                  </li>
+                  <li class="history-step">
+                    <div class="history-marker">
+                      <img loading="lazy" src="./img/mecanisme.png" alt="Mécanisme"/>
+                    </div>
+                    <div class="history-body">
+                      Les <strong>mécanismes hydrauliques</strong> se perfectionnent au fil des siècles. Les moulins deviennent une source majeure d'énergie locale et renouvelable, au cœur de la vie des villages.
+                    </div>
+                  </li>
+                  <li class="history-step final">
+                    <div class="history-marker">
+                      <img loading="lazy" src="./img/stop-destruction.png" alt="Stop destruction"/>
+                    </div>
+                    <div class="history-body">
+                      Stop à la destruction du patrimoine meunier
+                    </div>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <footer class="footer text-faded text-center py-5">
     <div class="container">
