@@ -21,6 +21,233 @@
     <!-- Custom styles for this template -->
     <link href="css/business-casual.min.css" rel="stylesheet">
 
+    <style>
+      .contact-intro {
+        color: #5a4a3a;
+        font-size: 1.05rem;
+        max-width: 640px;
+        margin: 0 auto 2.5rem;
+        line-height: 1.7;
+      }
+      .contact-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.25rem;
+        margin-bottom: 2.5rem;
+      }
+      .contact-card {
+        background-color: rgba(255, 250, 240, 0.9);
+        border: 1px solid rgba(201, 127, 0, 0.2);
+        border-radius: 10px;
+        padding: 1.5rem 1rem;
+        text-align: center;
+        transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      }
+      .contact-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 18px rgba(46, 23, 2, 0.12);
+        border-color: #c97f00;
+      }
+      .contact-card img {
+        width: 44px;
+        height: 44px;
+        margin-bottom: 0.75rem;
+      }
+      .contact-card-label {
+        display: block;
+        font-family: 'Raleway', sans-serif;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: #8b5e00;
+        margin-bottom: 0.25rem;
+      }
+      .contact-card a,
+      .contact-card-value {
+        font-family: 'Lora', serif;
+        color: #2e1702;
+        font-size: 1rem;
+        font-weight: 600;
+        text-decoration: none;
+        word-break: break-word;
+      }
+      .contact-card a:hover {
+        color: #c97f00;
+        text-decoration: underline;
+      }
+      .address-card {
+        background-color: rgba(255, 248, 220, 0.6);
+        border-left: 4px solid #c97f00;
+        border-radius: 6px;
+        padding: 1.5rem 1.75rem;
+        margin-bottom: 2.5rem;
+        text-align: left;
+      }
+      .address-card-label {
+        display: block;
+        font-family: 'Raleway', sans-serif;
+        font-size: 0.78rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: #8b5e00;
+        margin-bottom: 0.6rem;
+      }
+      .address-card p {
+        font-family: 'Lora', serif;
+        color: #2e1702;
+        margin: 0;
+        line-height: 1.7;
+      }
+      .address-card strong {
+        font-size: 1.15rem;
+        color: #2e1702;
+      }
+      .leadership-note {
+        background-color: rgba(255, 250, 240, 0.75);
+        border: 1px solid rgba(201, 127, 0, 0.2);
+        border-radius: 8px;
+        padding: 1.25rem 1.5rem;
+        margin-bottom: 3rem;
+        text-align: left;
+        font-family: 'Lora', serif;
+        color: #3d2a1c;
+        line-height: 1.7;
+      }
+      .leadership-note strong {
+        color: #2e1702;
+      }
+      .adhesion-heading {
+        font-family: 'Raleway', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: #2e1702;
+        text-align: center;
+        margin-bottom: 0.5rem;
+      }
+      .adhesion-subheading {
+        text-align: center;
+        color: #5a4a3a;
+        font-style: italic;
+        margin-bottom: 2rem;
+      }
+      .tariff-section {
+        margin-bottom: 2.5rem;
+      }
+      .tariff-section-title {
+        font-family: 'Raleway', sans-serif;
+        font-size: 0.85rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: #8b5e00;
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+      .tariff-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1rem;
+      }
+      .tariff-card {
+        background-color: rgba(255, 250, 240, 0.9);
+        border: 1px solid rgba(201, 127, 0, 0.2);
+        border-radius: 8px;
+        padding: 1.25rem 1rem;
+        text-align: center;
+        transition: transform 0.25s ease, border-color 0.25s ease;
+      }
+      .tariff-card:hover {
+        transform: translateY(-2px);
+        border-color: #c97f00;
+      }
+      .tariff-card-label {
+        display: block;
+        font-family: 'Raleway', sans-serif;
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: #5a4a3a;
+        margin-bottom: 0.5rem;
+      }
+      .tariff-card-price {
+        font-family: 'Lora', serif;
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: #c97f00;
+      }
+      .tariff-card-note {
+        display: block;
+        font-size: 0.8rem;
+        color: #7a6856;
+        font-style: italic;
+        margin-top: 0.35rem;
+      }
+      .revue-highlight {
+        background-color: rgba(255, 248, 220, 0.7);
+        border: 1px dashed rgba(201, 127, 0, 0.4);
+        border-radius: 8px;
+        padding: 1rem 1.25rem;
+        margin-bottom: 2.5rem;
+        text-align: center;
+        font-family: 'Lora', serif;
+        color: #3d2a1c;
+        line-height: 1.6;
+      }
+      .revue-highlight strong {
+        color: #c97f00;
+      }
+      .download-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1rem;
+      }
+      .download-btn {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 1rem 1.25rem;
+        background-color: #2e1702;
+        color: #f5d9a0;
+        border-radius: 8px;
+        text-decoration: none;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 600;
+        transition: background-color 0.25s ease, transform 0.25s ease;
+      }
+      .download-btn:hover {
+        background-color: #8b5e00;
+        color: #fff;
+        text-decoration: none;
+        transform: translateY(-2px);
+      }
+      .download-btn-icon {
+        font-size: 1.5rem;
+        line-height: 1;
+      }
+      .download-btn-text {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.3;
+      }
+      .download-btn-text small {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        opacity: 0.75;
+      }
+      .payment-note {
+        text-align: center;
+        color: #5a4a3a;
+        font-style: italic;
+        margin-top: 1.5rem;
+      }
+    </style>
+
   </head>
 
   <body>
@@ -69,71 +296,108 @@
       <div class="container">
         <div class="row">
           <div class="col-xl-9 mx-auto">
-            <div class="cta-inner text-center rounded">
-              <h2 class="section-heading mb-5">
-                <span class="section-heading-upper">Contactez-nous !</span>
+            <div class="cta-inner rounded">
+              <h2 class="section-heading text-center mb-4">
+                <span class="section-heading-upper">Restons en contact</span>
+                <span class="section-heading-lower">Écrivez-nous</span>
               </h2>
-              <p class="address mb-12 text-center">
-                <em>
-                  Association de Sauvegarde des Moulins en l'Essonne<br/>
-                  Mairie d'Etampes<br/>
-                  Service de la Vie Associative<br/>
-                  Place de l'Hôtel-de-Ville et des Droits-de-l'Homme<br/>
-                  91150 ETAMPES<br/>
-                </em>
+
+              <p class="contact-intro text-center">
+                Une question sur un moulin, un projet de restauration, l'adhésion à l'association&nbsp;? N'hésitez pas à nous contacter&nbsp;— nous répondons avec plaisir.
               </p>
-              <p class="address mb-10 text-left" style="margin-top: 30px;">
-                <img loading="lazy" src="img/mail.png" alt="Email"/> <a href="mailto:asme91@laposte.net" class="stretched-link" style="position: relative;" target="_blank" rel="noopener noreferrer">asme91@laposte.net</a>
-              </p>
-              <p class="address mb-10 text-left" style="margin-top: 30px;">
-                <img loading="lazy" src="img/phone.png" alt="T&eacute;l&eacute;phone"/>06.06.75.99.33
-              </p>
-              <p class="address mb-10 text-left" style="margin-top: 30px;">
-                <img loading="lazy" src="img/facebook-48.png" alt="Facebook"> <a href="https://www.facebook.com/people/Moulins-Essonne/61569178076807/" class="stretched-link" target="_blank" rel="noopener noreferrer">www.facebook.com/ASME.91</a>
-              </p>
-              <!--
-              <p class="text-left" style="margin-top: 30px;margin-left: -16px;">
-                <img loading="lazy" src="img/facebook.png" alt="Facebook" width="70" style="margin-right: -20px;" /> Notre groupe Facebook : <span class="w-75 position-relative"><a class="stretched-link" href="https://fr-fr.facebook.com/Moulins91/" target="_blank" rel="noopener noreferrer">Moulins91</a></span>
-              </p>
-              -->
-              <br/>
-              <p class="address mb-10 text-left">
-              Jusqu'à la prochaine A.G. le président élu est Jean-Jacques RENARD et le vice-président Christian BLOUIN. Le Conseil d’Administration se réunit au moins deux fois par an.
-              </p>
-              <br/>
-              <p class="mb-10 text-left">
-                L’adhésion individuelle à l’association = 30 € (40 € pour un couple) ; il est aussi possible de souscrire un abonnement à la revue MOULINS DE FRANCE (4 numéros par an) pour <b>23 €</b> (<span style="color: red;">Tarif préférentiel accordé aux adhérents de l'ASME 91</span>).
-              </p>
-              <br/>
-              <p class="mb-12 text-left">
-                Pour les Personnes Morales :
-                <ul style="text-align: left;">
-                  <li>Associations (1901) > 30 €</li>
-                  <li>Entreprises > 50 €</li>
-                  <li>Collectivités > 100 €</li>
-                </ul>
-              </p>
-              <br/>
-              <p class="mb-10 text-left" style="text-align: left;">
-                Vous avez la possibilité de régler par chèque ou par virement en utilisant les liens :
-                <div style="text-align: left;margin-left: 40px;">
-                  <ul>
-                    <li>
-                      <a class="stretched-link" style="color: #0056b3;position: relative;" href="./document/ASME-Adh-2026.docx" target="_blank" rel="noopener noreferrer">Téléchargez la fiche d'adhésion Personne Physique</a>
-                    </li>
-                  </ul>
-                  <ul>
-                    <li>
-                      <a class="stretched-link" style="color: #0056b3;position:relative;" href="./document/ASME-Adh-2026-PM.docx" target="_blank" rel="noopener noreferrer">Téléchargez la fiche d'adhésion Personne Morale</a>
-                    </li>
-                  </ul>
+
+              <div class="contact-cards">
+                <div class="contact-card">
+                  <img loading="lazy" src="img/mail.png" alt="Email"/>
+                  <span class="contact-card-label">E-mail</span>
+                  <a href="mailto:asme91@laposte.net" target="_blank" rel="noopener noreferrer">asme91@laposte.net</a>
+                </div>
+                <div class="contact-card">
+                  <img loading="lazy" src="img/phone.png" alt="Téléphone"/>
+                  <span class="contact-card-label">Téléphone</span>
+                  <span class="contact-card-value">06.06.75.99.33</span>
+                </div>
+                <div class="contact-card">
+                  <img loading="lazy" src="img/facebook-48.png" alt="Facebook"/>
+                  <span class="contact-card-label">Facebook</span>
+                  <a href="https://www.facebook.com/people/Moulins-Essonne/61569178076807/" target="_blank" rel="noopener noreferrer">Moulins-Essonne</a>
+                </div>
               </div>
-              </p>
 
-              <br/>
-              <p class="mb-10 text-left" style="margin-top: 40px;">
+              <div class="address-card">
+                <span class="address-card-label">Adresse postale</span>
+                <p>
+                  <strong>Association de Sauvegarde des Moulins en l'Essonne</strong><br/>
+                  Mairie d'Étampes — Service de la Vie Associative<br/>
+                  Place de l'Hôtel-de-Ville et des Droits-de-l'Homme<br/>
+                  91150 ÉTAMPES
+                </p>
+              </div>
 
-              </p>
+              <div class="leadership-note">
+                Jusqu'à la prochaine Assemblée Générale, le président élu est <strong>Jean-Jacques RENARD</strong> et le vice-président <strong>Christian BLOUIN</strong>. Le Conseil d'Administration se réunit au moins deux fois par an.
+              </div>
+
+              <h3 class="adhesion-heading">Adhérer à l'association</h3>
+              <p class="adhesion-subheading">Soutenez la sauvegarde du patrimoine des moulins en Essonne</p>
+
+              <div class="tariff-section">
+                <div class="tariff-section-title">Personnes physiques</div>
+                <div class="tariff-grid">
+                  <div class="tariff-card">
+                    <span class="tariff-card-label">Individuel</span>
+                    <span class="tariff-card-price">30&nbsp;€</span>
+                  </div>
+                  <div class="tariff-card">
+                    <span class="tariff-card-label">Couple</span>
+                    <span class="tariff-card-price">40&nbsp;€</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tariff-section">
+                <div class="tariff-section-title">Personnes morales</div>
+                <div class="tariff-grid">
+                  <div class="tariff-card">
+                    <span class="tariff-card-label">Associations (loi 1901)</span>
+                    <span class="tariff-card-price">30&nbsp;€</span>
+                  </div>
+                  <div class="tariff-card">
+                    <span class="tariff-card-label">Entreprises</span>
+                    <span class="tariff-card-price">50&nbsp;€</span>
+                  </div>
+                  <div class="tariff-card">
+                    <span class="tariff-card-label">Collectivités</span>
+                    <span class="tariff-card-price">100&nbsp;€</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="revue-highlight">
+                Possibilité de souscrire un abonnement à la revue <strong>MOULINS DE FRANCE</strong> (4 numéros par an) pour <strong>23&nbsp;€</strong> — tarif préférentiel réservé aux adhérents de l'ASME 91.
+              </div>
+
+              <h3 class="adhesion-heading">Fiches d'adhésion 2026</h3>
+              <p class="adhesion-subheading">Règlement possible par chèque ou par virement</p>
+
+              <div class="download-grid">
+                <a class="download-btn" href="./document/ASME-Adh-2026.docx" target="_blank" rel="noopener noreferrer">
+                  <span class="download-btn-icon">⬇</span>
+                  <span class="download-btn-text">
+                    <small>Télécharger</small>
+                    Fiche — Personne physique
+                  </span>
+                </a>
+                <a class="download-btn" href="./document/ASME-Adh-2026-PM.docx" target="_blank" rel="noopener noreferrer">
+                  <span class="download-btn-icon">⬇</span>
+                  <span class="download-btn-text">
+                    <small>Télécharger</small>
+                    Fiche — Personne morale
+                  </span>
+                </a>
+              </div>
+
+              <p class="payment-note">Merci pour votre soutien à la sauvegarde de notre patrimoine&nbsp;!</p>
             </div>
           </div>
         </div>
@@ -153,10 +417,5 @@
 <script>document.getElementById("copyright-year")&&(document.getElementById("copyright-year").textContent=new Date().getFullYear());</script>
 
   </body>
-
-  <!-- Script to highlight the active date in the hours list -->
-  <script>
-    $('.list-hours li').eq(new Date().getDay()).addClass('today');
-  </script>
 
 </html>

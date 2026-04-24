@@ -21,6 +21,118 @@
   <!-- Custom styles for this template -->
   <link href="css/business-casual.min.css" rel="stylesheet">
 
+  <style>
+      /* Intro key figures */
+      .mill-stats {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+          gap: 1rem;
+          background-color: rgba(255, 250, 240, 0.9);
+          border-top: 1px solid rgba(201, 127, 0, 0.3);
+          border-bottom: 1px solid rgba(201, 127, 0, 0.3);
+          border-radius: 0.35rem;
+          padding: 1.25rem 1rem;
+          margin: 1.5rem 0;
+          text-align: center;
+      }
+      .mill-stats .stat-value {
+          font-family: 'Raleway', sans-serif;
+          font-weight: 800;
+          font-size: 1.75rem;
+          color: #8b5e00;
+          line-height: 1;
+      }
+      .mill-stats .stat-label {
+          font-family: 'Raleway', sans-serif;
+          font-size: 0.75rem;
+          text-transform: uppercase;
+          letter-spacing: 0.06em;
+          color: #2e1702;
+          margin-top: 0.35rem;
+      }
+
+      /* Table of contents — chip navigator */
+      .toc-title {
+          font-family: 'Raleway', sans-serif;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          font-size: 0.85rem;
+          color: #8b5e00;
+          margin: 1.5rem 0 0.75rem;
+      }
+      .toc-chips {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+          margin: 0 0 0.75rem;
+          padding: 0;
+          list-style: none;
+      }
+      .toc-chips a {
+          display: inline-block;
+          font-family: 'Raleway', sans-serif;
+          font-weight: 600;
+          font-size: 0.85rem;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          color: #2e1702;
+          background-color: rgba(255, 255, 255, 0.7);
+          border: 1px solid rgba(165, 164, 170, 0.6);
+          border-radius: 2rem;
+          padding: 0.4rem 0.9rem;
+          text-decoration: none;
+          transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+      }
+      .toc-chips a:hover {
+          background-color: rgba(255, 250, 240, 0.95);
+          border-color: #c97f00;
+          color: #8b5e00;
+          transform: translateY(-1px);
+          text-decoration: none;
+      }
+      .toc-chips a.category {
+          background-color: rgba(201, 127, 0, 0.15);
+          border-color: rgba(201, 127, 0, 0.45);
+          color: #8b5e00;
+      }
+      .toc-chips a.category:hover {
+          background-color: rgba(201, 127, 0, 0.28);
+      }
+
+      /* Back to top button */
+      .back-to-top {
+          position: fixed;
+          right: 1.5rem;
+          bottom: 1.5rem;
+          width: 46px;
+          height: 46px;
+          border-radius: 50%;
+          background-color: rgba(201, 127, 0, 0.92);
+          color: #fff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.2rem;
+          text-decoration: none;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+          opacity: 0;
+          pointer-events: none;
+          transition: opacity 0.25s ease, transform 0.2s ease, background-color 0.2s ease;
+          z-index: 1050;
+      }
+      .back-to-top.visible {
+          opacity: 1;
+          pointer-events: auto;
+      }
+      .back-to-top:hover {
+          background-color: #8b5e00;
+          color: #fff;
+          text-decoration: none;
+          transform: translateY(-3px);
+      }
+  </style>
+
 </head>
 
 <body>
@@ -50,9 +162,9 @@
           </li>
           <li class="nav-item px-lg-3">
             <a class="nav-link text-uppercase text-expanded" href="evenements.html">Ev&egrave;nements</a>
-          </li>.
+          </li>
           <li class="nav-item px-lg-3">
-            <a class="nav-link text-uppercase text-expanded" href="evenements.html">Le mot du pr&eacute;sident</a>
+            <a class="nav-link text-uppercase text-expanded" href="le-mot-du-president.html">Le mot du pr&eacute;sident</a>
           </li>
           <li class="nav-item px-lg-3">
             <a class="nav-link text-uppercase text-expanded" href="partenaires.html">Partenaires</a>
@@ -88,7 +200,52 @@
             <p class="mb-0">En Essonne nous avons peut-être « le plus grand moulin de France » avec les Grands Moulins de Corbeil-Essonnes (près de 1 800 t de farine quotidiennement) avec sa tour élévatrice inscrite aux monuments historiques. Cet important patrimoine industriel est situé à l’emplacement des anciens moulins implantés depuis le XIIème siècle.</p>
             <br/>
             <p class="mb-0">Nous n’oublions pas « Les Moulins Fouché », meuniers de père en fils depuis 1860, qui sont implantés à Baulne et qui produisent des farines issues de blés locaux et de grande qualité. Ce moulin à taille humaine mise sur la haute technologie grâce à ses laboratoires de recherche à même d'assurer une traçabilité sans faille. (La Gâtine ou la Fertoise sont deux baguettes de grande qualité et très connues et en 2018, les Moulins Fouché ont lancé l'Essonnienne, une farine issue de blés 100% Essonniens.</p>
-            <br/>
+
+            <div class="mill-stats">
+              <div>
+                <div class="stat-value">13+</div>
+                <div class="stat-label">moulins présentés</div>
+              </div>
+              <div>
+                <div class="stat-value">2</div>
+                <div class="stat-label">moulins à vent restants</div>
+              </div>
+              <div>
+                <div class="stat-value">XII<sup style="font-size:0.9rem;">e</sup></div>
+                <div class="stat-label">siècle des premiers moulins</div>
+              </div>
+              <div>
+                <div class="stat-value">1&nbsp;800&nbsp;t</div>
+                <div class="stat-label">farine / jour à Corbeil</div>
+              </div>
+            </div>
+
+            <div class="toc-title">Accès rapide</div>
+            <ul class="toc-chips">
+              <li><a class="category" href="#vent">Moulins à vent</a></li>
+              <li><a class="category" href="#eau">Moulins à eau</a></li>
+            </ul>
+
+            <div class="toc-title">Moulins à vent</div>
+            <ul class="toc-chips">
+              <li><a href="#manteaux">Blancs Manteaux · Viry-Châtillon</a></li>
+              <li><a href="#jonville">Jonville · Étampes</a></li>
+            </ul>
+
+            <div class="toc-title">Moulins à eau</div>
+            <ul class="toc-chips">
+              <li><a href="#chauffour">Chauffour · Étampes</a></li>
+              <li><a href="#planche">La Planche · Ormoy</a></li>
+              <li><a href="#chanteloup">Chanteloup · St-Cyr</a></li>
+              <li><a href="#badran">Badran · Étampes</a></li>
+              <li><a href="#brunehaut">Brunehaut · Morigny</a></li>
+              <li><a href="#pierrebrou">Pierre-Brou · Étréchy</a></li>
+              <li><a href="#vauboyen">Vauboyen · Bièvres</a></li>
+              <li><a href="#igny">Igny</a></li>
+              <li><a href="#maitrise">La Maîtrise · Milly</a></li>
+              <li><a href="#senlis">Senlis · Montgeron</a></li>
+              <li><a href="#corbeil">Les Grands Moulins · Corbeil</a></li>
+            </ul>
           </div>
         </div>
       </div>
@@ -631,6 +788,8 @@
     </div>
   </section>
 
+  <a href="#top" class="back-to-top" id="backToTop" aria-label="Retour en haut">↑</a>
+
   <footer class="footer text-faded text-center py-5">
     <div class="container">
       <p class="m-0 small">Copyright &copy; ASME 91 - <span id="copyright-year">2026</span></p>
@@ -642,6 +801,21 @@
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script>document.getElementById("copyright-year")&&(document.getElementById("copyright-year").textContent=new Date().getFullYear());</script>
+<script>
+  (function(){
+    var btn = document.getElementById('backToTop');
+    if (!btn) return;
+    function onScroll(){
+      if (window.pageYOffset > 400) btn.classList.add('visible');
+      else btn.classList.remove('visible');
+    }
+    window.addEventListener('scroll', onScroll, {passive:true});
+    btn.addEventListener('click', function(e){
+      e.preventDefault();
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  })();
+</script>
 
 </body>
 

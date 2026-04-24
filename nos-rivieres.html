@@ -22,6 +22,124 @@
     <!-- Custom styles for this template -->
     <link href="css/business-casual.min.css" rel="stylesheet">
 
+    <style>
+        /* Intro key figures */
+        .river-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 1rem;
+            background-color: rgba(255, 250, 240, 0.9);
+            border-top: 1px solid rgba(201, 127, 0, 0.3);
+            border-bottom: 1px solid rgba(201, 127, 0, 0.3);
+            border-radius: 0.35rem;
+            padding: 1.25rem 1rem;
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+        .river-stats .stat-value {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 800;
+            font-size: 1.75rem;
+            color: #8b5e00;
+            line-height: 1;
+        }
+        .river-stats .stat-label {
+            font-family: 'Raleway', sans-serif;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: #2e1702;
+            margin-top: 0.35rem;
+        }
+
+        /* Table of contents — chip navigator */
+        .toc-title {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.85rem;
+            color: #8b5e00;
+            margin: 1.5rem 0 0.75rem;
+        }
+        .toc-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 0 0 0.5rem;
+            padding: 0;
+            list-style: none;
+        }
+        .toc-chips a {
+            display: inline-block;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #2e1702;
+            background-color: rgba(255, 255, 255, 0.7);
+            border: 1px solid rgba(165, 164, 170, 0.6);
+            border-radius: 2rem;
+            padding: 0.4rem 0.9rem;
+            text-decoration: none;
+            transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+        }
+        .toc-chips a:hover {
+            background-color: rgba(255, 250, 240, 0.95);
+            border-color: #c97f00;
+            color: #8b5e00;
+            transform: translateY(-1px);
+            text-decoration: none;
+        }
+
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            right: 1.5rem;
+            bottom: 1.5rem;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background-color: rgba(201, 127, 0, 0.92);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.25s ease, transform 0.2s ease, background-color 0.2s ease;
+            z-index: 1050;
+        }
+        .back-to-top.visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .back-to-top:hover {
+            background-color: #8b5e00;
+            color: #fff;
+            text-decoration: none;
+            transform: translateY(-3px);
+        }
+
+        /* Conclusion icons row */
+        .logo-icons-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            align-items: center;
+            margin: 1.5rem 0 0.5rem;
+        }
+        .logo-icons-row img {
+            max-height: 141px;
+            width: auto;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -54,15 +172,14 @@
                 <li class="nav-item px-lg-3">
                     <a class="nav-link text-uppercase text-expanded" href="evenements.html">Ev&egrave;nements</a>
                 </li>
-                .
                 <li class="nav-item px-lg-3">
-                    <a class="nav-link text-uppercase text-expanded" href="evenements.html">Le mot du
+                    <a class="nav-link text-uppercase text-expanded" href="le-mot-du-president.html">Le mot du
                         pr&eacute;sident</a>
                 </li>
                 <li class="nav-item px-lg-3">
                     <a class="nav-link text-uppercase text-expanded" href="partenaires.html">Partenaires</a>
                 </li>
-                <li class="nav-item px-lg-4">
+                <li class="nav-item px-lg-3">
                     <a class="nav-link text-uppercase text-expanded" href="contactez-nous.html">Contactez-nous</a>
                 </li>
             </ul>
@@ -82,7 +199,7 @@
                 </div>
             </div>
             <img loading="lazy" class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0"
-                 src="img/la_juine_a_ormoy-la-riviere.jpg" alt="Planche">
+                 src="img/la_juine_a_ormoy-la-riviere.jpg" alt="La Juine à Ormoy-la-Rivière">
             <div class="product-item-description d-flex ml-auto">
                 <div class="bg-faded p-5 rounded">
                     <p class="mb-0">Le d&eacute;partement de l’Essonne compte 4 r&eacute;gions naturelles : Beauce,
@@ -93,6 +210,38 @@
                         rivi&egrave;res principales jalonnent le d&eacute;partement et rejoignent la Seine vers le
                         nord-est. Les plans d’eau occupent plus de 100 hectares. Ces milieux sont particuli&egrave;rement
                         riches en oiseaux aquatiques et poissons.</p>
+
+                    <div class="river-stats">
+                        <div>
+                            <div class="stat-value">400+</div>
+                            <div class="stat-label">km de cours d'eau</div>
+                        </div>
+                        <div>
+                            <div class="stat-value">10</div>
+                            <div class="stat-label">rivières principales</div>
+                        </div>
+                        <div>
+                            <div class="stat-value">4</div>
+                            <div class="stat-label">régions naturelles</div>
+                        </div>
+                        <div>
+                            <div class="stat-value">100+ ha</div>
+                            <div class="stat-label">plans d'eau</div>
+                        </div>
+                    </div>
+
+                    <div class="toc-title">Accès rapide par rivière</div>
+                    <ul class="toc-chips">
+                        <li><a href="#la-juine">La Juine</a></li>
+                        <li><a href="#l-orge">L'Orge</a></li>
+                        <li><a href="#yerres">L'Yerres</a></li>
+                        <li><a href="#bievre">La Bièvre</a></li>
+                        <li><a href="#l-ecole">L'École</a></li>
+                        <li><a href="#essonne-1">L'Essonne</a></li>
+                        <li><a href="#seine">La Seine</a></li>
+                        <li><a href="#conclusion">Conclusion</a></li>
+                    </ul>
+
                     <br/>
                     <p class="mb-0">LA <a href="#seine">SEINE</a> est la seule rivi&egrave;re navigable du d&eacute;partement. Ses principaux
                         affluents en Essonne sont la <a href="#bievre">Bièvre</a>, l’<a href="#l-ecole">Ecole</a>, l’Essonne, l’Orge, le
@@ -111,10 +260,8 @@
                     <p class="mb-0">L'<a href="#yerres">YERRES</a> reçoit les eaux de l’Avon, du Beuvron, du Br&eacute;au, de la Marsange, du
                         petit ru d'Oly, du R&eacute;veillon, de la Visandre et de l'Yvron.</p>
                     <br/>
-                    <p class="mb-0">Il y a beaucoup de rivi&egrave;res pour faire tourner les roues des moulins en
-                        Essonne !</p>
-                    <br/>
-                    <p class="mb-0"></p>
+                    <p class="mb-0"><strong>Il y a beaucoup de rivi&egrave;res pour faire tourner les roues des moulins en
+                        Essonne !</strong></p>
                 </div>
             </div>
         </div>
@@ -1141,31 +1288,17 @@
                     <p class="mb-0">
                         Il sera impossible de retrouver leur cours naturel d’origine ! Alors arrêtons de financer la destruction des ouvrages. Si les castors ont disparu il est encore temps de sauver le peu qu’il reste de notre patrimoine « moulin ».
                     </p><br/>
-                    <p class="mb-0">
-                        <br/>
-                        <br/>
-                        <table style="width:100%;display: block;margin:auto;">
-                            <tr>
-                                <td width="15%"></td>
-                                <td>
-                                    <img loading="lazy" src="./img/essonne-terre-d-avenirs-icone-1.png" alt="Icone 1" height="141" />
-                                </td>
-                                <td width="15%"></td>
-                                <td>
-                                    <img loading="lazy" src="./img/essonne-terre-d-avenirs-icone-2.png" alt="Icone 2"height="141" style="display: block;margin:auto;" />
-                                </td>
-                                <td width="15%"></td>
-                            </tr>
-                        </table>
-                        <br/>
-                        <br/>
-                        <br/>
-                    </p>
+                    <div class="logo-icons-row">
+                        <img loading="lazy" src="./img/essonne-terre-d-avenirs-icone-1.png" alt="Essonne Terre d'avenirs - icône 1" />
+                        <img loading="lazy" src="./img/essonne-terre-d-avenirs-icone-2.png" alt="Essonne Terre d'avenirs - icône 2" />
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<a href="#top" class="back-to-top" id="backToTop" aria-label="Retour en haut">↑</a>
 
 <footer class="footer text-faded text-center py-5">
     <div class="container">
@@ -1178,6 +1311,21 @@
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script>document.getElementById("copyright-year")&&(document.getElementById("copyright-year").textContent=new Date().getFullYear());</script>
+<script>
+  (function(){
+    var btn = document.getElementById('backToTop');
+    if (!btn) return;
+    function onScroll(){
+      if (window.pageYOffset > 400) btn.classList.add('visible');
+      else btn.classList.remove('visible');
+    }
+    window.addEventListener('scroll', onScroll, {passive:true});
+    btn.addEventListener('click', function(e){
+      e.preventDefault();
+      window.scrollTo({top:0, behavior:'smooth'});
+    });
+  })();
+</script>
 
 </body>
 
