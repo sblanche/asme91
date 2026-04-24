@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
 
@@ -26,7 +26,7 @@
 <body>
 
 <h1 class="site-heading text-center text-white d-none d-lg-block">
-    <img src="img/logo.jpg" alt="Logo"/><br/><br/>
+    <img loading="lazy" src="img/logo.jpg" alt="Logo"/><br/><br/>
     <span class="site-heading-lower">Les &eacute;v&egrave;nements</span>
 </h1>
 
@@ -88,7 +88,7 @@
                         <br/>
                         <br/>
                         <li>
-                            <span class="w-75 position-relative">Le <b>16 décembre</b> rencontre avec le <a href="https://siarja.fr" class="stretched-link text-info" target="_blank">SIARJA</a>.<br/>(Syndicat Intercommunal pour l’Am&eacute;nagement de la Rivi&egrave;re Juine et de ses Affluents)</span>
+                            <span class="w-75 position-relative">Le <b>16 décembre</b> rencontre avec le <a href="https://siarja.fr" class="stretched-link text-info" target="_blank" rel="noopener noreferrer">SIARJA</a>.<br/>(Syndicat Intercommunal pour l’Am&eacute;nagement de la Rivi&egrave;re Juine et de ses Affluents)</span>
                             <span class="w-75">Entretien tr&egrave;s enrichissant qui nous a permis de faire connaissance avec Mme SIEBENALER, nouvelle pr&eacute;sidente, et de d&eacute;finir comment nous allons continuer &agrave; travailler ensemble en 2021.</span>
                         </li>
                         <br/>
@@ -107,7 +107,7 @@
                         <div>
                         <li>
                             <span class="w-75 position-relative">
-                                Les <b>5 et 6 septembre</b> participation au <a href="img/evenement/forum.jpg" class="stretched-link text-info" target="_blank">Forum des Associations</a> de l'Etampois et lancement du concours de dessin.
+                                Les <b>5 et 6 septembre</b> participation au <a href="img/evenement/forum.jpg" class="stretched-link text-info" target="_blank" rel="noopener noreferrer">Forum des Associations</a> de l'Etampois et lancement du concours de dessin.
                             </span>
                         </li>
                         </div>
@@ -115,7 +115,7 @@
                         <div>
                         <li>
                             <span class="w-75 position-relative">
-                                <a class="page-link" target="_blank" href="reglement-concours-dessin.html">&#x2794; Voir le r&eacute;glement</a>
+                                <a class="page-link" target="_blank" rel="noopener noreferrer" href="reglement-concours-dessin.html">&#x2794; Voir le r&eacute;glement</a>
                             </span>
                         </li>
                         </div>
@@ -144,7 +144,7 @@
                         </li>
                         <br/>
                         <br/>
-                        <img src="./img/evenement/arbre.png" width="75%"/>
+                        <img loading="lazy" src="./img/evenement/arbre.png" width="75%"/>
                         <br/>
                         <br/>
                         <br/>
@@ -192,7 +192,7 @@
                         <br/>
                         <li>
                             <div>
-                                <img src="img/evenement/affiche-pays-en-fete.jpg" alt="Saint Escobille"
+                                <img loading="lazy" src="img/evenement/affiche-pays-en-fete.jpg" alt="Saint Escobille"
                                      class="w-50 ml-auto"/>
                                 <div>
                                     <span class="ml-auto"><b>Les 21 et 22 septembre</b></span><br/>
@@ -215,7 +215,7 @@
                         <br/>
                         <li>
                             <div>
-                                <img src="img/evenement/affiche-moulin.jpg" alt="Moulin" class="w-50 ml-auto"/>
+                                <img loading="lazy" src="img/evenement/affiche-moulin.jpg" alt="Moulin" class="w-50 ml-auto"/>
                                 <div>
                                     <span class="ml-auto"><b>Les 22 et 23 juin</b></span><br/>
                                     <span>Pour les journ&eacute;es des moulins : nous ouvrons le moulin des Clercs à Boissy La Rivi&egrave;ve et nous tenons &agrave; remercier nos amis Dani&egrave;le et Georges Sens Olive pour leur accord d'ouverture et leur participation active (Il y a 10 ans ils &eacute;taient les premiers &agrave; bien vouloir ouvrir leur moulin !).</span>
@@ -294,8 +294,8 @@
 
 <footer class="footer text-faded text-center py-5">
     <div class="container">
-        <p class="m-0 small">Copyright &copy; ASME 91 - 2022</p>
-        <p class="m-0 small">Site r&eacute;alis&eacute; par <a href="https://www.sylvinhoid.com/fr" target="_blank"
+        <p class="m-0 small">Copyright &copy; ASME 91 - <span id="copyright-year">2026</span></p>
+        <p class="m-0 small">Site r&eacute;alis&eacute; par <a href="https://www.sylvinhoid.com/fr" target="_blank" rel="noopener noreferrer"
                                                                style="color: white;">sylvinhoid</a></p>
     </div>
 </footer>
@@ -303,6 +303,7 @@
 <!-- Bootstrap core JavaScript -->
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script>document.getElementById("copyright-year")&&(document.getElementById("copyright-year").textContent=new Date().getFullYear());</script>
 
 </body>
 

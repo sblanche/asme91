@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="description" content="Le mot du président de l'ASME 91 : actualités, engagements et enjeux de la préservation du patrimoine des moulins hydrauliques en Essonne.">
+  <meta name="author" content="ASME 91">
+  <meta name="keywords" content="président, ASME 91, moulins, Essonne, actualités, association">
 
-  <title>ASME 91 - Le mot du pr&eacute;sident</title>
+  <title>ASME 91 - Le mot du président</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -25,7 +26,7 @@
 <body>
 
   <h1 class="site-heading text-center text-white d-none d-lg-block">
-    <img src="img/logo.jpg" alt="Logo" /><br/><br/>
+    <img loading="lazy" src="img/logo.jpg" alt="Logo" /><br/><br/>
     <span class="site-heading-lower">Le mot du président</span>
   </h1>
 
@@ -66,7 +67,7 @@
 
   <section class="page-section about-heading">
     <div class="container">
-      <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/JJR-resized.jpg" alt="Jean-Jacques Renard">
+      <img loading="lazy" class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/JJR-resized.jpg" alt="Jean-Jacques Renard">
       <div class="about-heading-content">
         <div class="row">
           <div class="col-xl-9 col-lg-10 mx-auto">
@@ -110,14 +111,15 @@
 
   <footer class="footer text-faded text-center py-5">
     <div class="container">
-      <p class="m-0 small">Copyright &copy; ASME 91 - 2020</p>
-      <p class="m-0 small">Site r&eacute;alis&eacute; par <a href="https://www.sylvinhoid.com/fr" target="_blank" style="color: white;">sylvinhoid</a></p>
+      <p class="m-0 small">Copyright &copy; ASME 91 - <span id="copyright-year">2026</span></p>
+      <p class="m-0 small">Site r&eacute;alis&eacute; par <a href="https://www.sylvinhoid.com/fr" target="_blank" rel="noopener noreferrer" style="color: white;">sylvinhoid</a></p>
     </div>
   </footer>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script>document.getElementById("copyright-year")&&(document.getElementById("copyright-year").textContent=new Date().getFullYear());</script>
 
 </body>
 
