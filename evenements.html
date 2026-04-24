@@ -22,6 +22,69 @@
     <!-- Custom styles for this template -->
     <link href="css/business-casual.min.css" rel="stylesheet">
 
+    <style>
+        .events-section-title {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #2e1702;
+            border-bottom: 2px solid #a5a4aa;
+            padding-bottom: 0.5rem;
+            margin: 2rem 0 1.5rem;
+        }
+        .events-section-title.upcoming { color: #8b5e00; }
+        .events-section-title.past { color: #555; }
+
+        .event-year {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 800;
+            font-size: 2rem;
+            color: #2e1702;
+            margin: 1.5rem 0 0.5rem;
+        }
+
+        .event-item {
+            background-color: rgba(255, 255, 255, 0.6);
+            border-left: 4px solid #a5a4aa;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 1.25rem;
+            border-radius: 0.25rem;
+        }
+        .event-item.upcoming { border-left-color: #c97f00; }
+        .event-item .event-date {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            text-transform: uppercase;
+            color: #8b5e00;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+        .event-item.past .event-date { color: #666; }
+        .event-item .event-title {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 600;
+            font-size: 1.15rem;
+            margin-bottom: 0.5rem;
+            color: #2e1702;
+        }
+        .event-item .event-body { margin-bottom: 0.5rem; }
+        .event-item .event-body p { margin-bottom: 0.25rem; }
+        .event-item img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 0.75rem;
+            border-radius: 0.25rem;
+        }
+        .archive-links {
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(165, 164, 170, 0.5);
+        }
+    </style>
+
 </head>
 
 <body>
@@ -72,77 +135,136 @@
     <div class="container">
         <div class="row">
             <div class="col-xl-12 mx-auto">
-                <div class="cta-inner text-center rounded">
-                    <h2 class="section-heading mb-5">
+                <div class="cta-inner rounded">
+                    <h2 class="section-heading mb-4 text-center">
                         <span class="section-heading-lower">Ev&egrave;nements</span>
                     </h2>
-                    <ul class="list-unstyled list-hours w-75 mb-10 text-left mx-auto">
-                        <li class="list-unstyled-item list-hours-item d-flex text-xl-left font-weight-bold">
-                            2025-2026
-                        </li>
-                        <br/>
-                        <li>
-                            <span class="w-75">
-                                <b><i>A venir</i></b>
-                                <br/><br/>
-                                Samedi 18 avril de 17h30 à 19h30 : Dans le cadre du cycle "Les Samedis de l'Histoire", conférence / débat / rencontre<br/"Comment sauver le premier patrimoine industriel de notre territoire : les moulins hydrauliques ?"<br/>à la Maison des Services Publics Municipaux Marcel-Lafouasse, 12 carrefour des Religieuses, 91150 Étampes.<br/>Entrée libre.<br/>
-                                <img loading="lazy" src="./img/evenement/samedis-histoire-18-avril.jpg" alt="Les Samedis de l'Histoire - 18 avril - Moulins hydrauliques" width="500" /><br/>
-                                <br/>
-                                10-13 avril : Congrès FFAM dans le Jura
-                                <br/><br/>
-                                9 janvier : la Galette des Reines à la salle Saint-Antoine 91150 ETAMPES
-                                <a  class="page-link" href="./document/Proposition-Galette-2026.docx" target="_blank" rel="noopener noreferrer">Réservation indispensable !</a><br/>
-                                <br/>
-                                <b><i>Passés</i></b>
-                                <br/><br/>
-                                8 novembre : Conférence « les 3 moulins de la Vallée Verte » à Etréchy ou Auvers-Saint-Georges.<br/>
-                                <img loading="lazy" src="./img/evenement/3-moulins-de-la-vallee-verte.png" alt="Les 3 moulins de la Vallée Verte" width="320" /><br/>
-                                <br/>
-                                20-21 septembre : dernière ouverture du moulin de CHAUFFOUR avec son propriétaire actuel.<br/><br/>
-                                6-7 septembre : Forum des Associations Etampes<br/>
-                                <img loading="lazy" src="./img/evenement/forum.png" alt="Forum des Associations Etampes" width="500" /><br/>
-                                <br/>
-                                29 juin : découverte du moulin de CHAGRENON à Auvers-Saint-Georges<br/>
-                                <a  class="page-link" href="http://www.patrimoinedepays-moulins.org" target="_blank" rel="noopener noreferrer">
-                                    <img loading="lazy" src="./img/evenement/renvoi1-journee-patrimoine.jpg" alt="Journée du Patrimoine de pays" />
-                                </a><br/><br/>
 
-                                27-28 juin : circuit des moulins du quartier Saint-Gilles d’Etampes<br/><br/>
-                                17 mai : Fête du moulin Poissard à 91410 Roinville.<br/><br/>
-                                <!--
-                                <a  class="page-link" href="./img/evenement/renvoi2-affiche.jpg" target="_blank" rel="noopener noreferrer">
-                                    Invitation
-                                </a><br/><br/>
-                                -->
-                                11 avril : Projet Vélorail et Tacot.<br/><br/>
-                                10 avril : CA le bureau sortant est réélu.<br/><br/>
-                                6 avril 15h : conférence "Familles de meuniers"<br/>
-                                <!--
-                                <a  class="page-link" href="./img/evenement/renvoi3-famille.png" target="_blank" rel="noopener noreferrer">
-                                    Invitation
-                                </a><br/><br/>
-                                -->
-                                6 avril 17h : Assemblée Générale Salle Saint Antoine Etampes<br/><br/>
-                                27 au 30 mars : Congrès FFAM au Mont Saint Michel.<br/>
-                            </span>
-                            <br/>
-                            <span class="w-75">
-                                6 février : Conseil d'administration
-                            </span>
-                            <br/><br/>
-                            <span class="w-75">
-                                10 Janvier : "galette des Reines" - salle Saint-Antoine à Etampes
-                            </span>
-                            <br/>
-                            <br/>
-                        </li>
-                        <br/><br/><br/><br/>
-                        <a href="evenements-2024-2023.html" class="page-link">Voir les évènements 2024 & 2023</a>
-                        <br/>
-                        <a href="evenements-2022-2021.html" class="page-link">Voir les évènements 2022 & 2021</a>
-                        <br/>
-                        <br/>
-                    </ul>
+                    <div class="event-year">2025 – 2026</div>
+
+                    <h3 class="events-section-title past">Passés</h3>
+
+                    <article class="event-item past">
+                        <div class="event-date">Samedi 18 avril · 17h30 – 19h30</div>
+                        <div class="event-title">Comment sauver le premier patrimoine industriel de notre territoire : les moulins hydrauliques ?</div>
+                        <div class="event-body">
+                            <p>Dans le cadre du cycle <em>« Les Samedis de l'Histoire »</em> — conférence / débat / rencontre.</p>
+                            <p>Maison des Services Publics Municipaux Marcel-Lafouasse, 12 carrefour des Religieuses, 91150 Étampes.</p>
+                            <p><strong>Entrée libre.</strong></p>
+                        </div>
+                        <img loading="lazy" src="./img/evenement/samedis-histoire-18-avril.jpg" alt="Affiche Les Samedis de l'Histoire - 18 avril - Moulins hydrauliques" width="500" />
+                    </article>
+
+                    <article class="event-item past">
+                        <div class="event-date">10 – 13 avril</div>
+                        <div class="event-title">Congrès FFAM dans le Jura</div>
+                    </article>
+
+                    <article class="event-item past">
+                        <div class="event-date">9 janvier</div>
+                        <div class="event-title">Galette des Reines</div>
+                        <div class="event-body">
+                            <p>Salle Saint-Antoine, 91150 Étampes.</p>
+                            <p><a class="page-link" href="./document/Proposition-Galette-2026.docx" target="_blank" rel="noopener noreferrer">Réservation indispensable !</a></p>
+                        </div>
+                    </article>
+
+                    <article class="event-item past">
+                        <div class="event-date">8 novembre</div>
+                        <div class="event-title">Conférence « Les 3 moulins de la Vallée Verte »</div>
+                        <div class="event-body">
+                            <p>À Étréchy ou Auvers-Saint-Georges.</p>
+                        </div>
+                        <img loading="lazy" src="./img/evenement/3-moulins-de-la-vallee-verte.png" alt="Les 3 moulins de la Vallée Verte" width="320" />
+                    </article>
+
+                    <article class="event-item past">
+                        <div class="event-date">20 – 21 septembre</div>
+                        <div class="event-title">Dernière ouverture du moulin de Chauffour</div>
+                        <div class="event-body">
+                            <p>Avec son propriétaire actuel.</p>
+                        </div>
+                    </article>
+
+                    <article class="event-item past">
+                        <div class="event-date">6 – 7 septembre</div>
+                        <div class="event-title">Forum des Associations d'Étampes</div>
+                        <img loading="lazy" src="./img/evenement/forum.png" alt="Forum des Associations Etampes" width="500" />
+                    </article>
+
+                    <article class="event-item past">
+                        <div class="event-date">29 juin</div>
+                        <div class="event-title">Découverte du moulin de Chagrenon</div>
+                        <div class="event-body">
+                            <p>À Auvers-Saint-Georges.</p>
+                        </div>
+                        <a class="page-link" href="http://www.patrimoinedepays-moulins.org" target="_blank" rel="noopener noreferrer">
+                            <img loading="lazy" src="./img/evenement/renvoi1-journee-patrimoine.jpg" alt="Journée du Patrimoine de pays" />
+                        </a>
+                    </article>
+
+                    <article class="event-item past">
+                        <div class="event-date">27 – 28 juin</div>
+                        <div class="event-title">Circuit des moulins du quartier Saint-Gilles d'Étampes</div>
+                    </article>
+
+                    <article class="event-item past">
+                        <div class="event-date">17 mai</div>
+                        <div class="event-title">Fête du moulin Poissard</div>
+                        <div class="event-body">
+                            <p>91410 Roinville.</p>
+                        </div>
+                    </article>
+
+                    <article class="event-item past">
+                        <div class="event-date">11 avril</div>
+                        <div class="event-title">Projet Vélorail et Tacot</div>
+                    </article>
+
+                    <article class="event-item past">
+                        <div class="event-date">10 avril</div>
+                        <div class="event-title">Conseil d'Administration</div>
+                        <div class="event-body">
+                            <p>Le bureau sortant est réélu.</p>
+                        </div>
+                    </article>
+
+                    <article class="event-item past">
+                        <div class="event-date">6 avril · 15h</div>
+                        <div class="event-title">Conférence « Familles de meuniers »</div>
+                    </article>
+
+                    <article class="event-item past">
+                        <div class="event-date">6 avril · 17h</div>
+                        <div class="event-title">Assemblée Générale</div>
+                        <div class="event-body">
+                            <p>Salle Saint-Antoine, Étampes.</p>
+                        </div>
+                    </article>
+
+                    <article class="event-item past">
+                        <div class="event-date">27 – 30 mars</div>
+                        <div class="event-title">Congrès FFAM au Mont Saint-Michel</div>
+                    </article>
+
+                    <article class="event-item past">
+                        <div class="event-date">6 février</div>
+                        <div class="event-title">Conseil d'Administration</div>
+                    </article>
+
+                    <article class="event-item past">
+                        <div class="event-date">10 janvier</div>
+                        <div class="event-title">Galette des Reines</div>
+                        <div class="event-body">
+                            <p>Salle Saint-Antoine, Étampes.</p>
+                        </div>
+                    </article>
+
+                    <div class="archive-links text-center">
+                        <a href="evenements-2024-2023.html" class="page-link">Voir les évènements 2024 &amp; 2023</a><br/>
+                        <a href="evenements-2022-2021.html" class="page-link">Voir les évènements 2022 &amp; 2021</a><br/>
+                        <a href="evenements-2020-2019.html" class="page-link">Voir les évènements 2020 &amp; 2019</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -163,10 +285,5 @@
 <script>document.getElementById("copyright-year")&&(document.getElementById("copyright-year").textContent=new Date().getFullYear());</script>
 
 </body>
-
-<!-- Script to highlight the active date in the hours list -->
-<script>
-    $('.list-hours li').eq(new Date().getDay()).addClass('today');
-</script>
 
 </html>
