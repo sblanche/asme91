@@ -36,17 +36,27 @@
         margin-bottom: 2.5rem;
       }
       .contact-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         background-color: rgba(255, 250, 240, 0.9);
         border: 1px solid rgba(201, 127, 0, 0.2);
         border-radius: 10px;
         padding: 1.5rem 1rem;
         text-align: center;
-        transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+        text-decoration: none;
+        color: inherit;
+        transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
       }
-      .contact-card:hover {
+      .contact-card:hover,
+      .contact-card:focus {
         transform: translateY(-3px);
         box-shadow: 0 8px 18px rgba(46, 23, 2, 0.12);
         border-color: #c97f00;
+        background-color: rgba(255, 248, 220, 1);
+        text-decoration: none;
+        color: inherit;
+        outline: none;
       }
       .contact-card img {
         width: 44px;
@@ -63,18 +73,15 @@
         color: #8b5e00;
         margin-bottom: 0.25rem;
       }
-      .contact-card a,
       .contact-card-value {
         font-family: 'Lora', serif;
         color: #2e1702;
         font-size: 1rem;
         font-weight: 600;
-        text-decoration: none;
         word-break: break-word;
       }
-      .contact-card a:hover {
+      .contact-card:hover .contact-card-value {
         color: #c97f00;
-        text-decoration: underline;
       }
       .address-card {
         background-color: rgba(255, 248, 220, 0.6);
@@ -307,21 +314,21 @@
               </p>
 
               <div class="contact-cards">
-                <div class="contact-card">
+                <a class="contact-card" href="mailto:asme91@laposte.net">
                   <img loading="lazy" src="img/mail.png" alt="Email"/>
                   <span class="contact-card-label">E-mail</span>
-                  <a href="mailto:asme91@laposte.net" target="_blank" rel="noopener noreferrer">asme91@laposte.net</a>
-                </div>
-                <div class="contact-card">
+                  <span class="contact-card-value">asme91@laposte.net</span>
+                </a>
+                <a class="contact-card" href="tel:+33606759933">
                   <img loading="lazy" src="img/phone.png" alt="Téléphone"/>
                   <span class="contact-card-label">Téléphone</span>
                   <span class="contact-card-value">06.06.75.99.33</span>
-                </div>
-                <div class="contact-card">
+                </a>
+                <a class="contact-card" href="https://www.facebook.com/profile.php?id=61569178076807" target="_blank" rel="noopener noreferrer">
                   <img loading="lazy" src="img/facebook-48.png" alt="Facebook"/>
                   <span class="contact-card-label">Facebook</span>
-                  <a href="https://www.facebook.com/people/Moulins-Essonne/61569178076807/" target="_blank" rel="noopener noreferrer">Moulins-Essonne</a>
-                </div>
+                  <span class="contact-card-value">Moulins-Essonne</span>
+                </a>
               </div>
 
               <div class="address-card">
